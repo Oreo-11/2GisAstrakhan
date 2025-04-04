@@ -1,0 +1,309 @@
+.registration__container {
+    background-color:rgba(15, 15, 15, 0.3499999940395355);
+    height:894px;
+    width:1631px;
+    border-radius:20px;
+    border: 2px solid var(--gradient-pink);
+   
+    box-shadow: 
+        inset 0px -80px 100px 0px rgba(235, 132, 167, 40%), 
+        inset 6px -13px 100px 0px rgba(233, 131, 168, 40%), 
+        inset 14px 31px 100px 0px rgba(234, 132, 168, 20%);
+}
+
+.registration__form {
+    margin: 54px 98px 174px 103px;
+
+    display: grid;
+    grid-template: repeat(8, 1fr) 110px/ 375px 106px 375px 106px 153px 26px 296px;
+    align-items: center;
+    justify-items: stretch;
+
+    row-gap: 5px;
+
+    color: var(--font-white);
+}
+
+.registration__title {
+    font-size: 24px;
+}
+
+.registration__input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration__input-border {
+    width:372px;
+    height:52px;
+
+    background: var(--gradient-to-right);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration__input {
+    width:370px;
+    height:50px;
+
+    
+    border-radius: 10px;
+    border: 0px;
+    outline:none;
+
+    color: var(--gradient-blue);
+    font-size: 20px;
+
+    padding: 15px 20px;
+}
+
+.registration__label {
+    font-size: 20px;
+}
+
+
+
+.worktime__box {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.worktime__border {
+    width: 119px;
+    height: 52px;
+}
+
+.worktime__place {
+    width: 117px;
+    height: 50px;
+
+    border-radius: 10px;
+    color: var(--gradient-blue);
+
+    text-align: center;
+    font-size: 20px;
+}
+
+.worktime__dash {
+    
+}
+.worktime__title {
+    font-size: 20px;
+}
+
+
+
+#bar-image__label {
+    width: 153px;
+    height: 209px;
+
+    background-color:#ffffff;
+    border-radius:10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-image__upload {
+    width: 133px;
+    height: 185px;
+    border: 1px dashed var(--black);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration__label {
+
+}
+
+.bar-image__upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-image__icon {
+    width: 32px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid var(--black);
+    border-radius: 5px;
+}
+
+.bar-image__title {
+    font-size: 15px;
+    color: var(--black);
+}
+
+
+
+.input__contact-border {
+    width: 296px;
+    height: 52px
+}
+
+.input__contact {
+    width: 294px;
+    height: 50px;
+}
+
+.input__area-border {
+    width: 475px;
+    height: 241px;
+}
+
+.input__area {
+    width: 473px;
+    height: 239px;
+
+    padding: 15px 20px;
+}
+
+#input__submit {
+    width: 225px;
+    height: 40px;
+
+    border: 0px;
+    outline: none;
+    border-radius: 50px;
+
+    color: var(--black);
+    background-color: var(--gradient-blue);
+
+    font-size: 16px;
+
+    grid-column: span 7;
+    grid-row: 9;
+
+    justify-self: center;
+    align-self: end;
+}
+
+
+#person-info {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#input__surname {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#input__name {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+#input__patronymic {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+#input__mail {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+#input__password {
+    grid-column: 1;
+    grid-row: 7;
+}
+
+#input__password-repeat {
+    grid-column: 1;
+    grid-row: 8;
+}
+
+
+#bar-info {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#input__bar-name {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#input__phone {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+#input__address {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+#input__INN {
+    grid-column: 3;
+    grid-row: 5;
+}
+
+#input__KPP {
+    grid-column: 3;
+    grid-row: 6;
+}
+
+#input__OGRN {
+    grid-column: 3;
+    grid-row: 7;
+}
+
+#input__worktime {
+    grid-column: 3;
+    grid-row: 8;
+}
+
+
+#input__bar-image {
+    grid-column: 5;
+    grid-row: 2 / span 3;
+
+    align-self: start;
+}
+
+
+
+#input__telegram {
+    grid-column: 7;
+    grid-row: 2;
+}
+
+#input__whatsapp {
+    grid-column: 7;
+    grid-row: 3;
+}
+
+#input__vk {
+    grid-column: 7;
+    grid-row: 4;
+}
+
+#input__about {
+    grid-column: 5 / span 2;
+    grid-row: 5 / span 4;
+
+    align-self: end;
+}
+
+#input__about .registration__label{
+    width: 475px;
+}

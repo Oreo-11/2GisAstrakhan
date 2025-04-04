@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Adamina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap');
+
+
+.jost {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 24px;
+}
+
+.adamina {
+    font-family: "Adamina", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 64px;
+}
+
+.train-one {
+    font-family: "Train One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 48px;
+}
+
+.bellota-text {
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 16px;
+}
+
+.bellota-text-bold {
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+    font-size: 36px;
+}
+  

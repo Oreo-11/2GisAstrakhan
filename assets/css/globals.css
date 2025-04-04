@@ -1,0 +1,45 @@
+:root {
+    --ultraviolet: #0F0331;
+
+    --gradient-blue: #5471FE;
+    --gradient-pink: #FB86A0;
+    --gradient-to-right: linear-gradient(to right, var(--gradient-blue), var(--gradient-pink));
+    --background-color: linear-gradient(var(--gradient-blue), var(--gradient-pink));
+    
+
+
+    --dark-blue: #0D0D55;
+
+    --font-white: #F5F5F7;
+    --font-dark: #2D2D2D;
+
+    --background-bar-card: #C4C4C4;
+    --border-blue: #5771FC;
+
+    --black: #0f0f0f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--ultraviolet);
+
+    color: var(--ultraviolet);
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ultraviolet);
+}
+
+.text-white {
+    color: var(--font-white);
+}

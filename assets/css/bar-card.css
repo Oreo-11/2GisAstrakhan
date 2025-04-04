@@ -1,0 +1,120 @@
+.background__image {
+    position: fixed;
+    z-index: 0;
+
+}
+
+
+
+.bar__card {  
+    position: absolute;
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    
+    box-shadow: 
+        inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), 
+        inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), 
+        inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+    background-color: rgba(196, 196, 196, 0);
+    backdrop-filter: blur(50px);
+
+    display: flex;
+
+    max-width: 1041px;
+    z-index: 1;
+}
+
+.bar__image {
+    border-radius: 20px;
+
+    margin: 20px;
+}
+
+.bar__score {
+    width: 130px;
+    height: 55px;
+
+    background-color: var(--gradient-pink);
+    color: var(--ultraviolet);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    position: absolute;
+    left: 930px;
+    top: 30px;
+}
+
+.bar__about {
+    color: var(--font-white);
+
+    margin: 32px 112px 25px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bar__title {
+
+}
+
+.bar__description {
+    font-size: 24px;
+}
+
+.bar__address {
+    font-size: 20px;
+}
+
+.bar__avgcheck {
+    font-size: 20px;
+}
+
+.bar__link {
+    position: absolute;
+    top: 230px;
+    left: 968px;
+
+    width: 84px;
+    height: 84px;
+
+    border: 1px solid var(--border-blue);
+    border-radius: 50%;
+
+    background-color: var(--ultraviolet);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar__link svg {
+    fill: var(--gradient-blue);
+}
+
+.bar__like {
+    position: absolute;
+    top: 240px;
+    left: 15px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 1px solid var(--border-blue);
+    border-radius: 50%;
+
+    background-color:rgba(217, 217, 217, 0.3);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar__like svg {
+    fill: var(--gradient-blue);
+}
