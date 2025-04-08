@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+
+:root {
+    --gradient-blue: #5471FE;
+    --gradient-pink: #FB86A0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.jost {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header__search {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+
+
+}
+
+.header__search__container {
+    background: var(--gradient-to-right);
+    max-width: 1114px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    border-radius: 20px 20px 20px 0;
+    padding: 18px 51px 15px 61px;
+
+    
+    
+}
+
+.header__search__logo {
+
+}
+
+.header__search__nav {
+    
+}
+
+.nav__list {
+    display: flex;
+
+    gap: 45px;
+
+    list-style-type: none;
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+
+    font-size: 24px;
+}
+
+.header__search__profile {
+}
+
+.header__search__profile {
+
+}
