@@ -6,47 +6,72 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/globals.css">
+    <link rel="stylesheet" href="assets/css/header-search.css">
     <link rel="stylesheet" href="assets/css/alt-header-search.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
 </head>
 <body>
     <header class="header__search jost">
         <div class="header__search__container">
-            <img src="assets/images/header-logo.svg" alt="Логотип drive" class="header__search__logo">
-            <nav class="header__search__nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
+            <img src="assets/images/header-logo.svg" alt="Логотип drive" class="header__search__container__logo">
+            <nav class="header__search__container__nav">
+                <ul class="header__search__container__nav__list">
+                    <li class="header__search__container__nav__list__nav__item">
+                        <a href="#" class="header__search__container__nav__list__nav__item__link">
                             Галерея
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
+                    <li class="header__search__container__nav__list__nav__item">
+                        <a href="#" class="header__search__container__nav__list__nav__item__link">
                             Карта
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
+                    <li class="header__search__container__nav__list__nav__item">
+                        <a href="#" class="header__search__container__nav__list__nav__item__link">
                             История города
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
+                    <li class="header__search__container__nav__list__nav__item">
+                        <a href="#" class="header__search__container__nav__list__nav__item__link">
                             Каталог
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">
+                    <li class="header__search__container__nav__list__nav__item">
+                        <a href="#" class="header__search__container__nav__list__nav__item__link">
                             Страница мест
                         </a>
                     </li>
                 </ul>
     
             </nav>
-            <img src="assets/images/avatar.png" alt="Аватар профиля" class="header__search__profile">
+            <img src="assets/images/avatar.png" alt="Аватар профиля" class="header__search__container__profile">
         </div>
-        <div class="header__search__searchBlock">
-            
+        <div class="header__search__block">
+            <input type="text" class="header__search__block__input">
         </div>
     </header>
+    <div class="profile__main">
+        <div class="profile__main__user">
+            <div class="profile__main__user__info">
+                <div class="profile__main__user__info__img">
+                    <img src="assets/images/image (5).png" alt="">
+                </div>
+                <div class="profile__main__user__info__text">
+                    <h1>Анастасия Павлова</h1>
+                    <p class="profile__main__user__info__text__smallP">Был(-а) в сети 21.08.2025</p>
+                    <p class="profile__main__user__info__text__p">Возраст: 28</p>
+                    <p class="profile__main__user__info__text__p__last">Пол: Жен.</p>
+                    <div class="profile__main__user__info__text__buttonBlock">
+                        <button class="profile__main__user__info__text__buttonBlock__button">Редактировать профиль</button>
+                        <button class="profile__main__user__info__text__buttonBlock__button">Удалить аккаунт</button>
+                    </div>
+                </div>
+            </div>
+            <div class="profile__main__user__fon">
+                <img src="assets/images/fbcfd8ae07dc914cb195dc88c4d8aba2-Photoroom 1 (1).png" alt="">
+            </div>
+        </div>
+        <div class="profile__main__allInfo"></div>
+    </div>
 </body>
 </html>
