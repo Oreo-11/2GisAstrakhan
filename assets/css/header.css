@@ -17,37 +17,36 @@
     font-style: normal;
 }
 
-.header__search {
-    width: 80%;
+.header {
     margin-top: 20px;
-    display: flex;
-
-
+    width: fit-content;
+    border-radius: 20px 20px 20px 0;
+    background: var(--gradient-to-right);
 }
 
-.header__search__container {
-    background: var(--gradient-to-right);
-    max-width: 1114px;
+.header__container {
+    
+    width: 1114px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    border-radius: 20px 20px 20px 0;
+
     padding: 18px 51px 15px 61px;
 
-    
-    
-}
 
-.header__search__logo {
 
 }
 
-.header__search__nav {
+.header__container__logo {
+
+}
+
+.header__container__nav {
     
 }
 
-.nav__list {
+.header__container__nav__list {
     display: flex;
 
     gap: 45px;
@@ -55,20 +54,17 @@
     list-style-type: none;
 }
 
-.nav__item {
+.header__container__nav__list__nav__item {
 
 }
 
-.nav__link {
+.header__container__nav__list__nav__item__link {
     text-decoration: none;
     color: black;
 
     font-size: 24px;
 }
 
-.header__search__profile {
+.header__container__profile {
 }
 
-.header__search__profile {
-
-}

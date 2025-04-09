@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+
+:root {
+    --gradient-blue: #5471FE;
+    --gradient-pink: #FB86A0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header__search {
+    width: min-content;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header__search__container {
+    border-radius: 20px 20px 20px 0;
+    background: var(--gradient-to-right);
+    width: 1114px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+
+    padding: 18px 51px 15px 61px;
+
+
+
+}
+
+.header__search__container__logo {
+
+}
+
+.header__search__container__nav {
+    
+}
+
+.header__search__container__nav__list {
+    display: flex;
+
+    gap: 45px;
+
+    list-style-type: none;
+}
+
+.header__search__container__nav__list__nav__item {
+
+}
+
+.header__search__container__nav__list__nav__item__link {
+    text-decoration: none;
+    color: black;
+
+    font-size: 24px;
+}
+
+.header__search__container__profile {
+}
+
+.header__search__block{
+    width: 403px;
+    height: 52px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: double 2px transparent;
+    border-radius: 11px;
+    background-image: linear-gradient(#F5F5F5, #F5F5F5), linear-gradient(to right, #5771FC, #F886A2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.header__search__block__input{
+    width: 361px;
+    height: 50px;
+    border: none;
+    background: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #5771FC;
+    align-items: center;
+}
+
+.header__search__block__input:focus {
+    outline-width: 0;
+}
+
+/* .header__search__block__input[type="text"]{
+    padding-left: 30px;
+} */
