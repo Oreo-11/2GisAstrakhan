@@ -61,7 +61,7 @@
 }
 
 .main-page__content__main__description {
-    max-width: 511px;
+    width: 511px;
     margin-top: 104px;
 }
 
@@ -83,6 +83,7 @@
     border: 1px solid var(--dark-blue);
     border-radius: 30px;
     color: var(--dark-blue);
+
 }
 
 #bg {
@@ -108,21 +109,32 @@
 }
 
 .main-page__content__footer__map {
+    width: 496px;
+    height: 273px;
 
+    margin-top: 95px;
+
+    background: url("/assets/images/map.png") center / cover;
+
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .main-page__content__footer__map__image {
-    position: relative;
-    top: 95px;
-    z-index: 0;
+
 }
 
 .main-page__content__footer__map__link {
-    width: 496px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    gap: 8px;
+
+    height: 30%;
 
     border-radius: 20px;
 
@@ -228,6 +240,8 @@
     justify-content: space-between;
     align-items: center;
 
+    gap: 27px;
+
     background-color: var(--gradient-pink);
 
     border-radius: 0 30px 30px 30px;
@@ -286,8 +300,11 @@
 
 @media (max-width: 1840px) {
     .main-page__contacts {
-        top: 1100px;
-        right: 0px;
+        position: static;
+        float: right;
+        margin-top: 35px;
+
+        border-radius: 30px 0 50px 30px;
     }
 }
 
@@ -297,7 +314,7 @@
     }
 
     .main-page__content__main__container {
-        margin-top: 180px;
+        margin-top: 160px;
     }
 
 
@@ -323,6 +340,8 @@
         font-size: 36px;
 
         margin: 10px 0px;
+
+        width: 70%;
     }
 
     .main-page__circle {
@@ -333,8 +352,8 @@
     }
 
     .main-page__circle__another {
-        width: 300px;
-        height: 300px;
+        width: 260px;
+        height: 260px;
     }
 
     .main-page__content__main__title {
@@ -350,6 +369,10 @@
     .main-page__image {
         display: none;
     }
+
+    .main-page__contacts {
+        margin-top: 28px;
+    }
 }
 
 @media (max-width: 1070px) {
@@ -363,7 +386,8 @@
 
     .main-page__circle {
         position: absolute;
-        right: 0px;
+        right: -20px;
+        top: 60px;
         left: auto;
 
         width: 350px;
@@ -383,21 +407,20 @@
     .main-page__content__footer__container {
         flex-direction: column;
         align-items: start;
+        justify-content: center;
+
+        width: 80%;
     }
 
-    .main-page__contacts {
-        top: 1280px;
+    .main-page__content__footer__link {
+        align-self: center;
+
+        width: 80%;
     }
 
     @media (max-width: 930px) {
         .main-page__content__header__nav__list {
             font-size: 18px;
-        }
-    }
-
-    @media (max-width: 852px) {
-        .main-page__contacts {
-            top: 1330px;
         }
     }
 
@@ -431,6 +454,7 @@
 
         .main-page__content__main__container {
             margin-left: 27px;
+            margin-top: 150px;
         }
 
         .main-page__content__footer__container {
@@ -438,7 +462,263 @@
         }
 
         .main-page__contacts {
-            width: 550px;
+            width: 500px;
+        }
+
+        .main-page__contacts__list {
+            margin-left: 18px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+        }
+
+        .main-page__contacts__description {
+            margin-right: 22px;
+            margin-top: 13px;
+            margin-bottom: 13px;
+        }
+
+
+        .main-page__circle {
+            width: 280px;
+            height: 280px;
+        }
+
+        .main-page__circle__another {
+            width: 180px;
+            height: 180px;
+        }
+
+        .main-page__content__main__links {
+            width: 80%;
+        }
+
+        .main-page__content__main__link {
+            padding: 8px 30px;
+        }
+
+        .main-page__content__footer__map {
+            width: 100%;
+        }
+
+        .main-page__content__footer__map__link {
+            width: 100%;
+
+            border-radius: 15px;
+        }
+
+        .main-page__content__footer__map__link__description {
+            font-size: 16px;
+        }
+
+        .main-page__content__main__link {
+            font-size: 14px;
+        }
+
+        .main-page__contacts__description {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 670px) {
+        .main-page__content__main__subtitle {
+            /* font-size: 20px; */
+        }
+        
+        .main-page__content__main__link {
+            padding: 8px 10px;
+        }
+
+        .main-page__content__footer__link__description {
+            font-size: 18px;
+
+            width: 80%;
+        }
+
+        .main-page__content__footer__link__arrow {
+            width: 60px;
+            height: 60px;
+        }
+
+        .main-page__content__main__description {
+            width: 80%;
+        }
+    }
+
+    @media (max-width: 560px) {
+        .main-page__content__main__subtitle {
+            font-size: 30px;
+        }
+
+        .main-page__content__main__title__mini {
+            font-size: 28px;
+        }
+
+        .main-page__content__main__description {
+            font-size: 14px;
+        }
+
+        .main-page__content__footer__map__link__description {
+            font-size: 14px;
+        }
+
+        .main-page__content__footer__map__link__arrow {
+            width: 60px;
+        }
+
+        .main-page__content__footer__link {
+            gap: 5px;
+        }
+
+        .main-page__content__footer__link__arrow {
+            width: 50px;
+            height: 50px;
+        }
+
+        .main-page__content__footer__link__arrow__image {
+            width: 20px;
+        }
+
+        .main-page__circle {
+            width: 205px;
+            height: 205px;
+        }
+
+        .main-page__circle__another {
+            width: 135px;
+            height: 135px;
+        }
+
+        .main-page__contacts {
+            width: 340px;
+
+            border-radius: 20px 0 40px 20px;
+        }
+
+        .main-page__contacts__list__image {
+            width: 40px;
+        }
+
+        .main-page__contacts__description {
+            font-size: 12px;
+        }
+
+        .main-page__content__footer__link {
+            width: 85%;
+        }
+    }
+
+    @media (max-width: 505px) {
+        .main-page__content__main__subtitle {
+            font-size: 20px;
+        }
+
+        .main-page__content__main__title__mini {
+            font-size: 20px;
+        }
+
+        .main-page__content__main__description {
+            font-size: 12px;
+        }
+
+        .main-page__content__main__links {
+            margin-top: 20px;
+        }
+
+        .main-page__content__main__link {
+            font-size: 10px;
+        }
+
+        .main-page__content__footer__map {
+            margin-top: 30px;
+
+            height: 200px;
+        }
+
+        .main-page__content__footer__map__link__description {
+            font-size: 12px;
+            margin: 10px 0 10px 14px;
+        }
+
+        .main-page__content__footer__map__link__arrow__image {
+            width: 60px;
+        }
+
+        .main-page__content__footer__container {
+            gap: 20px;
+        }
+
+        .main-page__content__footer__link__arrow {
+            width: 50px;
+            height: 50px;
+        }
+
+        .main-page__content__footer__link__arrow__image {
+            width: 20px;
+        }
+
+        .main-page__content__footer__link__description {
+            font-size: 14px;
+        }
+
+        .main-page__content__footer__map__link {
+            border-radius: 13px;
+        }
+    }
+
+
+        @media (max-width: 450px) {
+            .main-page__header__burger {
+                width: 92px;
+                height: 62px;
+            }
+
+            .main-page__content__main__container {
+                margin-top: 110px;
+            }
+
+            .main-page__content__main__title__mini {
+                font-size: 14px;
+            }
+
+            .main-page__content__main__description {
+                font-size: 10px;
+            }
+
+            .main-page__content__main__link {
+                padding: 5px 9px;
+
+                font-size: 8px;
+            }
+
+            .main-page__content__footer__map {
+                height: 130px;
+            }
+
+            .main-page__content__footer__map__link__description {
+                font-size: 8px;
+
+            }
+
+            .main-page__content__footer__map__link__arrow__image {
+                width: 42px;
+            }
+
+            .main-page__content__footer__map__link__arrow {
+                margin-right: 18px;
+            }
+
+            .main-page__content__footer__link__description {
+                font-size: 10px;
+            }
+
+            .main-page__content__footer__link__arrow {
+                width: 27px;
+                height: 27px;
+            }
+
+            .main-page__content__footer__link__arrow__image {
+                width: 12px;
+            }
         }
     }
 }
