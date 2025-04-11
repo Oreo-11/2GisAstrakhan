@@ -36,7 +36,7 @@
 
 body {
     background-color: var(--ultraviolet);
-
+    width: 100%;
     color: var(--ultraviolet);
 
 }

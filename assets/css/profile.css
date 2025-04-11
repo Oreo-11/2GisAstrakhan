@@ -73,3 +73,77 @@
     border: 1px solid #F785A1;
     padding: 10px 22px;
 }
+.profile__main__user__info__text__buttonBlock__button:last-child{
+    margin-left: 24px;
+}
+.profile__main__exit__button{
+    background-color: #F785A2;
+    font-size: 16px;
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #0F0F0F;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    padding: 11px 23px;
+    width: 172px;
+}
+.profile__main__exit__button:hover{
+    background-color: transparent;
+    font-size: 16px;
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #F785A1;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid #F785A1;
+    padding: 10px 0px;
+    width: 172px;
+}
+.profile__main__exit{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+.profile__main__allInfo{
+    display: flex;
+}
+.profile__main__allInfo__block__main__favorite__line__block__heart{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #5871FC;
+    border-radius: 40px;
+}
+.bar__like {
+    position: relative;
+    bottom: 35px;
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid var(--border-blue);
+    border-radius: 50%;
+
+    background-color:rgba(217, 217, 217, 0.3);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bar__like svg {
+    fill: var(--gradient-blue);
+}
+.profile__main__allInfo__fon{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.profile__main__allInfo__block{
+    width: 80%;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+}
