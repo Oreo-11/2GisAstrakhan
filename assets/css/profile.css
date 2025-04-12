@@ -422,6 +422,7 @@
     row-gap: 14px;
     flex-wrap: wrap;
     margin-left: 43px;
+    margin-top: 23px;
 }
 .profile__main__allInfo__block__main__myPlaces__line__block__line__block__img img{
     width: 121px;
@@ -439,7 +440,27 @@
 }
 .profile__main__allInfo__block__main__myPlaces__line__block__line__block__text__smallP{
     font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    width: 184px;
+    font-style: normal;
+    font-size: 12px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block__text__bigP{
+    font-family: "Bellota Text", sans-serif;
     font-weight: 700;
     font-style: normal;
     font-size: 12px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block__text__bigP:first-child{
+    margin-top: 6px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block__text{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2px;
+    width: 193px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line{
+    display: flex;
+    flex-wrap: wrap;
 }
