@@ -6,6 +6,7 @@
     --gradient-blue: #5471FE;
     --gradient-pink: #FB86A0;
     --gradient-to-right: linear-gradient(to right, var(--gradient-blue), var(--gradient-pink));
+    --gradient-to-bottom: linear-gradient(to bottom, var(--gradient-blue), var(--gradient-pink));
     --gradient-color: linear-gradient(var(--gradient-blue), var(--gradient-pink));
     --gradient-color-reverse: linear-gradient(var(--gradient-pink), var(--gradient-blue));
     

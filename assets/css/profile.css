@@ -117,11 +117,12 @@
     border: 1px solid #5871FC;
     border-radius: 40px;
 }
-.bar__like {
+.profile__main__allInfo__block__main__favorite__line__block__img__bar__like {
     position: relative;
     bottom: 35px;
     width: 35px;
     height: 35px;
+    right: 7px;
 
     border: 1px solid var(--border-blue);
     border-radius: 50%;
@@ -133,7 +134,7 @@
     justify-content: center;
     align-items: center;
 }
-.bar__like svg {
+.profile__main__allInfo__block__main__favorite__line__block__img__bar__like svg {
     fill: var(--gradient-blue);
 }
 .profile__main__allInfo__fon{
@@ -146,4 +147,299 @@
     z-index: 1;
     position: relative;
     margin: 0 auto;
+}
+.profile__main__allInfo__block__main{
+    width: 100%;
+    background: var(--gradient-to-bottom);
+    padding-top: 30px;
+    border-radius: 0px 20px 20px 20px;
+}
+.profile__main__allInfo__block__title{
+    display: flex;
+    gap: 14px;
+}
+.profile__main__allInfo__block__title__block{
+    width: 196px;
+    height: 43px;
+    background-color: #F785A1;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+.profile__main__allInfo__block__title__block__active{
+    width: 196px;
+    height: 51px;
+    background-color: #5871FC;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+.profile__main__allInfo{
+    margin-top: 29px;
+}
+.profile__main__allInfo__block__main__favorite__line{
+    padding-top: 38px;
+    width: 830px;
+    margin-left: 43px;
+    display: flex;
+    column-gap: 26px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+.profile__main__allInfo__block__main__favorite{
+    width: 96%;
+    height: 478px;
+    overflow-y: scroll;
+}
+.profile__main__allInfo__block__main__favorite__line__block__text h1{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #0F0F0F;
+    font-size: 16px;
+}
+.profile__main__allInfo__block__main__favorite__line__block__text p{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #0F0F0F;
+    font-size: 12px;
+}
+.profile__main__allInfo__block__main__favorite::-webkit-scrollbar {
+    width: 5px;
+}
+.profile__main__allInfo__block__main__favorite::-webkit-scrollbar-track {
+    background: var(--gradient-to-bottom);
+    border-radius: 0px 20px 20px 0px;
+}
+.profile__main__allInfo__block__main__favorite::-webkit-scrollbar-thumb {
+    background-color: #0F0331;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+
+}
+.profile__main__allInfo__block__main__favorite::-webkit-scrollbar-thumb {
+    background: #0F0331;
+    border-radius: 5px;
+    width: 5px;
+    height: 90px;
+}
+.profile__main__allInfo__block__main__favorite__scroll{
+    height: 3000px;
+}
+.profile__main__allInfo__block__main__favorite__line__block__img__bar__like{
+    cursor: pointer;
+}
+.profile__main__allInfo__block__main__favorite__line__block__img__bar__like {
+    position: relative;
+    top: 35px;
+    width: 35px;
+    height: 35px;
+    right: 7px;
+
+    border-radius: 50%;
+
+    background-color:rgba(217, 217, 217, 0.3);
+    backdrop-filter: blur(4px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile__main__allInfo__block__main__favorite__line__block__img__bar__like svg {
+    fill: var(--gradient-blue);
+}
+.profile__main__allInfo__block__main__reviews__line__block__img{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    margin-left: 13px;
+}
+.profile__main__allInfo__block__main__reviews__line__block__review{
+    background: #F5F5F5;
+    border-radius: 10px;
+    padding: 11px 0px;
+    padding-left: 12px;
+    width: 100%;
+}
+.profile__main__allInfo__block__main__favorite__line__block__img__bar__like {
+    position: relative;
+    bottom: 350px;
+    width: 25px;
+    left: 10px;
+    top: -20px;
+    height: 25px;
+    right: 0px;
+    border: 1px solid #F785A2;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile__main__allInfo__block__main__reviews__line__block{
+    width: 85%;
+    margin-left: 43px;
+}
+.profile__main__allInfo__block__main__reviews__line__block h1{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-style: normal;
+}
+.profile__main__allInfo__block__main__reviews__line__block__review p{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.profile__main__allInfo__block__main__images__line{
+
+}
+
+.profile__main__allInfo__block__main__images__line__registration__input-box {
+    display: flex;
+    width: 157px;
+    flex-direction: column;
+}
+.profile__main__allInfo__block__main__images__line__bar-image__upload {
+    width: 133px;
+    height: 185px;
+    border: 1px dashed var(--black);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration__label {
+
+}
+
+.profile__main__allInfo__block__main__images__line__bar-image__upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile__main__allInfo__block__main__images__line__bar-image__icon {
+    width: 32px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid var(--black);
+    border-radius: 5px;
+}
+
+.profile__main__allInfo__block__main__images__line__bar-image__title {
+    font-size: 15px;
+    color: var(--black);
+}
+#profile__main__allInfo__block__main__images__line__bar-image__label {
+    width: 153px;
+    height: 196px;
+    cursor: pointer;
+    background-color:#ffffff;
+    border-radius:10px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__main__allInfo__block__main__images__line__bar-image__upload {
+    width: 133px;
+    height: 173px;
+    border: 1px dashed var(--black);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration__label {
+
+}
+
+.profile__main__allInfo__block__main__images__line__bar-image__upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile__main__allInfo__block__main__images__line__bar-image__icon {
+    width: 32px;
+    height: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid var(--black);
+    border-radius: 5px;
+}
+
+.profile__main__allInfo__block__main__images__line__bar-image__title {
+    font-size: 15px;
+    color: var(--black);
+}
+#profile__main__allInfo__block__main__images__line__input__about .registration__label{
+    width: 475px;
+}
+.profile__main__allInfo__block__main__images__line{
+    display: flex;
+    column-gap: 14px;
+    row-gap: 14px;
+    flex-wrap: wrap;
+    margin-left: 43px;
+}
+.profile__main__allInfo__block__main__images__line__block__img{
+    width: 153px;
+    height: 196px;
+    border-radius: 10px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__text{
+    margin-left: 43px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block{
+    display: flex;
+    column-gap: 14px;
+    row-gap: 14px;
+    flex-wrap: wrap;
+    margin-left: 43px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block__img img{
+    width: 121px;
+    height: 164px;
+    border-radius: 20px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__text h1{
+    font-size: 24px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block__text h1{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+.profile__main__allInfo__block__main__myPlaces__line__block__line__block__text__smallP{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 12px;
 }
