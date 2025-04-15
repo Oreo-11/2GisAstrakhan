@@ -7,10 +7,54 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/globals.css">
     <link rel="stylesheet" href="assets/css/header-search.css">
-    <link rel="stylesheet" href="assets/css/alt-header-search.css">
     <link rel="stylesheet" href="assets/css/profile.css">
 </head>
 <body>
+    <div class="header__moduleBlock">
+        <div class="header__moduleBlock__logoExit">
+            <div class="header__moduleBlock__logoExit__logo">
+                <img src="assets/images/header-logo.svg" alt="">
+            </div>
+            <div class="header__moduleBlock__logoExit__exit jost">
+                <p>Назад</p>
+            </div>
+        </div>
+        <div class="header__moduleBlock__search">
+            <div class="header__moduleBlock__search__block">
+                <input type="text" class="header__moduleBlock__search__block__input">
+            </div>
+            <button class="header__moduleBlock__search__block__button">Искать</button>
+        </div>
+        <div class="header__moduleBlock__menu">
+            <ul class="header__moduleBlock__menu jost">
+                <li class="header__moduleBlock__menu__nav__item">
+                    <a href="#" class="header__moduleBlock__menu__nav__item__link">
+                        Галерея
+                    </a>
+                </li>
+                <li class="header__moduleBlock__menu__nav__item">
+                    <a href="#" class="header__moduleBlock__menu__nav__item__link">
+                        Карта
+                    </a>
+                </li>
+                <li class="header__moduleBlock__menu__nav__item">
+                    <a href="#" class="header__moduleBlock__menu__nav__item__link">
+                        История города
+                    </a>
+                </li>
+                <li class="header__moduleBlock__menu__nav__item">
+                    <a href="#" class="header__moduleBlock__menu__nav__item__link">
+                        Каталог
+                    </a>
+                </li>
+                <li class="header__moduleBlock__menu__nav__item">
+                    <a href="#" class="header__moduleBlock__menu__nav__item__link">
+                        Страница мест
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <header class="header__search__mini jost">
         <div class="header__search__mini__menu">
             <img src="assets/images/Group 72 (1).png" alt="">
@@ -117,7 +161,7 @@
                 <div class="profile__main__allInfo__block__main">
                     <div class="profile__main__allInfo__block__main__favorite">
                         <div class="profile__main__allInfo__block__main__favorite__scroll">
-                            <!-- <div class="profile__main__allInfo__block__main__favorite__line">
+                            <div class="profile__main__allInfo__block__main__favorite__line">
                                 <div class="profile__main__allInfo__block__main__favorite__line__block">
                                     <div class="profile__main__allInfo__block__main__favorite__line__block__img">
                                         <img class="profile__main__allInfo__block__main__favorite__line__block__img" src="assets/images/Rectangle 225.png" alt="">
@@ -268,7 +312,7 @@
                                         <p>Средний чек: 1000-2000</p>
                                     </div>
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- <div class="profile__main__allInfo__block__main__reviews__line">
                                 <div class="profile__main__allInfo__block__main__reviews__line__block">
                                     <h1>Purple</h1>
@@ -335,7 +379,7 @@
                                     <img class="profile__main__allInfo__block__main__images__line__block__img" src="assets/images/Rectangle 241.png" alt="">
                                 </div>
                             </div> -->
-                            <div class="profile__main__allInfo__block__main__myPlaces__line__block">
+                            <!-- <div class="profile__main__allInfo__block__main__myPlaces__line__block">
                                 <div class="profile__main__allInfo__block__main__myPlaces__line__block__text">
                                     <h1 class="jost">Места, которые вы уже посещали!</h1>
                                 </div>
@@ -429,7 +473,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                       
                     </div>
@@ -437,5 +481,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        burgerMenu = document.querySelector(".header__search__mini__menu")
+
+        burgerMenu.addEventListener("click", () => {
+            moduleBlock = document.querySelector(".header__moduleBlock")
+            moduleBlock.style.display = "block"
+        })
+
+        moduleExit = document.querySelector(".header__moduleBlock__logoExit__exit")
+        
+        moduleExit.addEventListener("click", () => {
+            moduleBlock = document.querySelector(".header__moduleBlock")
+            moduleBlock.style.display = "none"
+        })
+    </script>
+
 </body>
 </html>
