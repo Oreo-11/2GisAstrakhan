@@ -10,6 +10,100 @@
     <link rel="stylesheet" href="assets/css/profile.css">
 </head>
 <body>
+    <div class="module__img">
+        <div class="header__moduleBlock__logoExit user__exit">
+            <div class="header__moduleBlock__logoExit__logo">
+                <img src="assets/images/header-logo.svg" alt="">
+            </div>
+            <div class="header__moduleBlock__logoExit__exit jost">
+                <p>Отмена</p>
+            </div>
+        </div>
+        <div class="module__img__allInfo">
+            <div class="user__moduleBlock__allInfo__img">
+                <div class="profile__main__allInfo__block__main__images__line__registration__input-box" id="profile__main__allInfo__block__main__images__line__input__bar-image">
+                    <label id="profile__main__allInfo__block__main__images__line__bar-image__label" for="profile__main__allInfo__block__main__images__line__bar-image">
+                        <div class="profile__main__allInfo__block__main__images__line__bar-image__upload">
+                            <div class="profile__main__allInfo__block__main__images__line__bar-image__icon">
+                                <img src="assets/images/upload-arrow.svg" alt="">
+                            </div>
+                            <span class="profile__main__allInfo__block__main__images__line__bar-image__title jost">Загрузить файл</span>
+                        </div>
+                    </label>
+                    <input type="file" accept="image/*" id="profile__main__allInfo__block__main__images__line__bar-image" hidden>
+                </div>
+            </div>
+            <div class="module__img__allInfo__input">
+                <p class="jost">Добавить описание</p>
+                <div class="module__img__allInfo__form__block">
+                    <textarea placeholder="Расскажите о месте, где было сделано ваше фото" type="text" class="module__img__allInfo__form__input"></textarea>
+                </div>
+                <div class="module__img__allInfo__form__block__button">
+                    <button>Добавить фото</button>
+                    <button id="exit__user__module">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user__moduleBlock">
+        <div class="header__moduleBlock__logoExit user__exit">
+            <div class="header__moduleBlock__logoExit__logo">
+                <img src="assets/images/header-logo.svg" alt="">
+            </div>
+            <div class="header__moduleBlock__logoExit__exit jost">
+                <p>Отмена</p>
+            </div>
+        </div>
+        <div class="user__moduleBlock__all">
+            <div class="user__moduleBlock__all__upload">
+                <div class="profile__main__allInfo__block__main__images__line__block">
+                    <div class="profile__main__allInfo__block__main__images__line__registration__input-box" id="profile__main__allInfo__block__main__images__line__input__bar-image">
+                        <label id="profile__main__allInfo__block__main__images__line__bar-image__label" for="profile__main__allInfo__block__main__images__line__bar-image">
+                            <div class="profile__main__allInfo__block__main__images__line__bar-image__upload">
+                                <div class="profile__main__allInfo__block__main__images__line__bar-image__icon">
+                                    <img src="assets/images/upload-arrow.svg" alt="">
+                                </div>
+                                <span class="profile__main__allInfo__block__main__images__line__bar-image__title jost">Загрузить файл</span>
+                            </div>
+                        </label>
+                        <input type="file" accept="image/*" id="profile__main__allInfo__block__main__images__line__bar-image" hidden>
+                    </div>
+                </div>
+            </div>
+            <div class="user__moduleBlock__all__form">
+                <p class="jost">Имя</p>
+                <div class="user__moduleBlock__all__form__block">
+                    <input placeholder="Имя пользователя" type="text" class="user__moduleBlock__all__form__input">
+                </div>
+                <p class="jost">Фамилия</p>
+                <div class="user__moduleBlock__all__form__block">
+                    <input placeholder="Фамилия пользователя" type="text" class="user__moduleBlock__all__form__input">
+                </div>
+                <div class="user__moduleBlock__all__form__age__gender">
+                    <div class="user__moduleBlock__all__form__age__gender__age">
+                        <p class="jost">Дата рождения</p>
+                        <div class="header__moduleBlock__search__block_date">
+                            <input placeholder="ДД.ММ.ГГГГ" type="text" class="header__moduleBlock__search__block_date__input">
+                        </div>
+                    </div>
+                    <div class="header__moduleBlock__search__block__age__gender__gender">
+                        <p class="jost">Пол</p>
+                        <div class="header__moduleBlock__search__block__age__gender__gender__block">
+                            <select name="gender" id="gender">
+                                <option value="men">Выбрать</option>
+                                <option value="men">Муж</option>
+                                <option value="women">Жен</option>
+                              </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="user__moduleBlock__all__form__button">
+                    <button>Сохранить</button>
+                    <button id="exit__user__module">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="header__moduleBlock">
         <div class="header__moduleBlock__logoExit">
             <div class="header__moduleBlock__logoExit__logo">
@@ -161,7 +255,7 @@
                 <div class="profile__main__allInfo__block__main">
                     <div class="profile__main__allInfo__block__main__favorite">
                         <div class="profile__main__allInfo__block__main__favorite__scroll">
-                            <div class="profile__main__allInfo__block__main__favorite__line">
+                            <!-- <div class="profile__main__allInfo__block__main__favorite__line">
                                 <div class="profile__main__allInfo__block__main__favorite__line__block">
                                     <div class="profile__main__allInfo__block__main__favorite__line__block__img">
                                         <img class="profile__main__allInfo__block__main__favorite__line__block__img" src="assets/images/Rectangle 225.png" alt="">
@@ -312,7 +406,7 @@
                                         <p>Средний чек: 1000-2000</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- <div class="profile__main__allInfo__block__main__reviews__line">
                                 <div class="profile__main__allInfo__block__main__reviews__line__block">
                                     <h1>Purple</h1>
@@ -343,10 +437,10 @@
                                     </div>
                                 </div>
                             </div> -->
-                            <!-- <div class="profile__main__allInfo__block__main__images__line">
-                                <div class="profile__main__allInfo__block__main__images__line__block">
+                            <div class="profile__main__allInfo__block__main__images__line">
+                                <div class="profile__main__allInfo__block__main__images__line__block" id="module__img__user">
                                     <div class="profile__main__allInfo__block__main__images__line__registration__input-box" id="profile__main__allInfo__block__main__images__line__input__bar-image">
-                                        <label id="profile__main__allInfo__block__main__images__line__bar-image__label" for="profile__main__allInfo__block__main__images__line__bar-image">
+                                        <label id="profile__main__allInfo__block__main__images__line__bar-image__label" >
                                             <div class="profile__main__allInfo__block__main__images__line__bar-image__upload">
                                                 <div class="profile__main__allInfo__block__main__images__line__bar-image__icon">
                                                     <img src="assets/images/upload-arrow.svg" alt="">
@@ -378,7 +472,7 @@
                                 <div class="profile__main__allInfo__block__main__images__line__block">
                                     <img class="profile__main__allInfo__block__main__images__line__block__img" src="assets/images/Rectangle 241.png" alt="">
                                 </div>
-                            </div> -->
+                            </div>
                             <!-- <div class="profile__main__allInfo__block__main__myPlaces__line__block">
                                 <div class="profile__main__allInfo__block__main__myPlaces__line__block__text">
                                     <h1 class="jost">Места, которые вы уже посещали!</h1>
@@ -490,10 +584,43 @@
             moduleBlock.style.display = "block"
         })
 
-        moduleExit = document.querySelector(".header__moduleBlock__logoExit__exit")
+        moduleExit = document.querySelectorAll(".header__moduleBlock__logoExit__exit")
         
-        moduleExit.addEventListener("click", () => {
+        moduleExit[0].addEventListener("click", () => {
+            moduleBlock = document.querySelector(".module__img")
+            moduleBlock.style.display = "none"
+        })
+        moduleExit[1].addEventListener("click", () => {
+            moduleBlock = document.querySelector(".user__moduleBlock")
+            moduleBlock.style.display = "none"
+        })
+        moduleExit[2].addEventListener("click", () => {
             moduleBlock = document.querySelector(".header__moduleBlock")
+            moduleBlock.style.display = "none"
+        })
+
+        moduleProfile = document.querySelector(".profile__main__user__info__text__buttonBlock__button")
+        moduleProfile.addEventListener("click", () => {
+            moduleBlock = document.querySelector(".user__moduleBlock")
+            moduleBlock.style.display = "block"
+        })
+
+        moduleProfileExit = document.querySelector("#exit__user__module")
+        moduleProfileExit.addEventListener("click", () => {
+            moduleBlock = document.querySelector(".user__moduleBlock")
+            moduleBlock.style.display = "none"
+        })
+
+        moduleImgUser = document.querySelector("#module__img__user")
+        console.log(moduleImgUser)
+        moduleImgUser.addEventListener("click", () => {
+            moduleBlock = document.querySelector(".module__img")
+            moduleBlock.style.display = "block"
+        })
+        
+        moduleImgUserExit = document.querySelector("#exit__user__module")
+        moduleImgUserExit.addEventListener("click", () => {
+            moduleBlock = document.querySelector(".module__img")
             moduleBlock.style.display = "none"
         })
     </script>
