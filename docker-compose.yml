@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./:/var/www
+      - ./_docker/nginx/conf.d/:/etc/nginx/conf.d/
+    ports:
+      - "8069:80"
+    depends_on:
+      - php  # Зависит от php-fpm
+    container_name: app_nginx
+
+  php:
+    build:
+      context: .
+      dockerfile: _docker/app/Dockerfile
+    volumes:
+      - ./:/var/www
+    expose:
+      - "9000"  # Открываем порт для PHP-FPM
+    container_name: app_php
+    command: php-fpm  # Запускаем PHP-FPM
+
+  app:
+    build:
+      context: .
+      dockerfile: _docker/app/Dockerfile
+    volumes:
+      - ./:/var/www
+      # Исключаем node_modules из монтирования
+      - /var/www/node_modules
+    container_name: app_frontend
+    command: sh -c "npm install && npm run dev"
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - VITE_APP_URL=http://localhost:3000
+    ports:
+      - "3000:3000"
+
+  # db:
+  #   image: mysql:8.0
+  #   restart: always
+  #   volumes:
+  #     - ./tmpp/db:/var/lib/mysql
+  #   environment:
+  #     MYSQL_DATABASE: lardocker
+  #     MYSQL_ROOT_PASSWORD: root
+  #   ports:
+  #     - "8101:3306"
+  #   command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
+  #   container_name: app_db
