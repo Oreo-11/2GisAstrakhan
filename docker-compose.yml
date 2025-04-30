@@ -42,8 +42,8 @@ services:
   db:
     image: mysql:8.0
     restart: always
-    volumes:
-      - ./tmpp/db:/var/lib/mysql
+    # volumes:
+      # - ./tmpp/db:/var/lib/mysql
     environment:
       MYSQL_DATABASE: lardocker
       MYSQL_ROOT_PASSWORD: root
