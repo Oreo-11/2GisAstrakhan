@@ -22,9 +22,11 @@ return new class extends Migration
             $table->string('surname');
             $table->string('login');
             $table->string('password');
-            $table->date('birthday');
+            $table->integer('age');
             $table->tinyInteger('sex');
             $table->tinyInteger('status');
+            $table->string('src');
+            $table->timestamp('last_entry');
         });
     }
 
