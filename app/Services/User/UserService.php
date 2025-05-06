@@ -19,11 +19,17 @@ class UserService
     /**
      * Получить пользователя по ID
      */
-    
-    public static function getUserById(int $id)
+    public static function getUserById(int $id): ?User
     {
         return User::find($id);
     }
 
+    /**
+     * Получить активных пользователей
+     */
+    public function getActiveUsers(): Collection
+    {
+        return User::where('status', 1)->get();
+    }
 
 }

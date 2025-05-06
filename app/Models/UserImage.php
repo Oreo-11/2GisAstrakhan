@@ -10,7 +10,13 @@ class UserImage extends Model
 {
     use HasFactory;
 
-    protected $table = 'users_gallery';
+    public $timestamps = false; // Отключаем timestamps
+
+    protected $fillable = [
+        'user_id', 
+        'description', 
+        'src' 
+    ];
 
     public function user() : BelongsTo
     {

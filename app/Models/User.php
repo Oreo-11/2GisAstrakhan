@@ -11,7 +11,9 @@ class User extends Model
 {
     use HasFactory;
 
-    public function images() : HasMany
+    public $timestamps = false; // Отключаем timestamps
+
+    public function image() : HasMany
     {
         return $this->hasMany(UserImage::class);
     }
