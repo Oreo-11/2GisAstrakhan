@@ -19,7 +19,7 @@
 .header__search__container {
     border-radius: 20px 20px 20px 0;
     background: var(--gradient-to-right);
-    width: 1114px;
+    width: 1002px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,8 +89,9 @@
     color: #5771FC;
     align-items: center;
 }
-
 .header__search__block__input:focus {
+    outline: none; 
+    border: none;
     outline-width: 0;
 }
 .header__moduleBlock{

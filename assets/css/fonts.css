@@ -3,7 +3,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&display=swap');
 
+
+@font-face {
+    font-family: 'PionerSansSemiBold';
+    src: url('../fonts/PionerSans-SemiBold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PionerSansLight';
+    src: url('../fonts/PionerSans-Light.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PionerSansBold';
+    src: url('../fonts/PionerSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'unttldBasic';
+    src: url('../fonts/unttld_basic.otf');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .jost {
     font-family: "Jost", sans-serif;
@@ -45,4 +74,10 @@
 
     font-size: 36px;
 }
+
+.alegreya-sans-sc {
+    font-family: "Alegreya Sans SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
   

@@ -2,7 +2,8 @@
 
 :root {
     --ultraviolet: #0F0331;
-
+    --bg-white: #f5f5f5;
+    
     --gradient-blue: #5471FE;
     --gradient-pink: #FB86A0;
     --gradient-to-right: linear-gradient(to right, var(--gradient-blue), var(--gradient-pink));

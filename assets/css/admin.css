@@ -1,0 +1,446 @@
+.admin {
+    background-color: var(--bg-white);
+}
+
+.admin-panel__block__button {
+    background-color: var(--gradient-pink);
+    
+    border: none;
+
+    height: 27px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+}
+
+/* Admin-header */
+.admin .header__search__container{
+    height: 72px;
+}
+
+.font-white {
+    color: var(--font-white);
+}
+
+.header__search__container__adminLogo {
+    display: flex;
+    align-items: center;
+}
+
+.header__search__container__adminExit {
+    display: flex;
+    align-items: center;
+    
+    text-decoration: underline;
+}
+
+
+/* Main */
+.admin-panel {
+
+}
+
+.admin-panel__container {
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.admin-panel__title {
+    font-size: 32px;
+}
+
+.admin-panel__content {
+    padding-top: 16px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+
+
+/* Requests */
+.admin-panel__requests {
+    padding-top: 35px;
+}
+
+.content-requests {
+    row-gap: 35px;
+    column-gap: 35px;
+
+    /* display: flex; */
+
+}
+
+.admin-panel__request__block {
+    width: 270px;
+    height: 325px;
+
+    border: 2px solid var(--border-blue);
+    border-radius: 10px;
+
+    display: grid;
+    grid-template-rows: repeat(40, 8px);
+    align-items: center;
+    
+    padding: 20px 13px 20px 18px;
+}   
+
+.admin-panel__request__block__subtitle {
+    font-size: 16px;
+    font-weight: 400;
+
+    align-items: center;
+
+    position: relative;
+    left: 8px;
+}
+
+.admin-panel__request__block__sentence {
+    font-size: 12px;
+
+    align-items: center;
+
+    position: relative;
+    left: 8px;
+}
+
+.admin-panel__request__block__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.admin-panel__request__block__button {
+    background-color: var(--gradient-pink);
+    
+    border: none;
+
+    height: 27px;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+}
+
+#accept {
+    width: 112px;
+}
+
+#decline {
+    width: 150px;
+}
+
+
+/* Гриды для карточки заявки */
+#name {
+    grid-row: 1 / span 3;
+}
+
+#mail {
+    grid-row: 5 / span 2;
+}
+
+#number {
+    grid-row: 7 / span 3;
+}
+
+#address {
+    grid-row: 10 / span 2;
+}
+
+#bar-name {
+    grid-row: 14 / span 3;
+}
+
+#INN {
+    grid-row: 18 / span 2;
+}
+
+#KPP {
+    grid-row: 20 / span 2;
+}
+
+#OGRN {
+    grid-row: 22 / span 2;
+}
+
+#telegramm {
+    grid-row: 27 / span 2;
+}
+
+#whatsapp {
+    grid-row: 29 / span 2;
+}
+
+#vk {
+    grid-row: 31 / span 2;
+}
+
+#request-buttons {
+    grid-row: 37 / span 4;
+}
+
+
+
+/* Users */
+.admin-panel__users {
+    padding-top: 35px;
+}
+
+.content-users {
+    gap: 36px;
+}
+
+.admin-panel__user__block {
+    width: 470px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.admin-panel__user__block__card {
+    /* height: 135px; */
+
+    border: 2px solid var(--border-blue);
+    border-radius: 10px;
+
+    display: flex;
+    gap: 10px;
+
+    padding: 16px;
+}
+
+.admin-panel__user__block__card__avatar {
+    width: 100px;
+    height: 105px;
+
+    border-radius: 10px;
+}
+
+.admin-panel__user__block__card__description {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 20px;
+}
+
+.admin-panel__user__block__card__description__name {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.admin-panel__user__block__card__description__text {
+
+}
+
+.admin-panel__user__block__card__description__sentence {
+    font-size: 12px;
+}
+
+#unban-user {
+    align-self: flex-end;
+
+    width: 150px;
+}
+
+
+
+/* Places */
+.admin-panel__places {
+    padding-top: 35px;
+}
+
+.content-places {
+    gap: 46px;
+}
+
+.admin-panel__place__block {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+}
+
+.admin-panel__place__block__card {
+    border: 2px solid var(--border-blue);
+    border-radius: 20px;
+
+    display: flex;
+
+    width: 550px;
+
+    padding: 12px;
+}
+
+.admin-panel__place__block__card__image {
+    border-radius: 20px;
+    width: 170px;
+    height: 180px;
+}
+
+.admin-panel__place__block__card__shapes__score {
+    width: 60px;
+    height: 50px;
+
+    background-color: var(--gradient-pink);
+    color: var(--ultraviolet);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    position: relative;
+    left: 20px;
+    top: -20px; 
+        
+    font-size: 20px;
+}
+
+.admin-panel__place__block__card__about {
+    margin: 10px 0px 18px 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-panel__place__block__card__about__title {
+    font-size: 20px;
+}
+
+.admin-panel__place__block__card__about__description {
+    font-size: 12px;
+}
+
+.admin-panel__place__block__card__about__text {
+
+}
+
+.admin-panel__place__block__card__about__text__sentence {
+    font-size: 12px;
+}
+
+.admin-panel__place__block__card__shapes__link {
+    width: 40px;
+    height: 40px;
+
+    border: 3px solid var(--border-blue);
+    border-radius: 50%;
+
+    background-color: var(--ultraviolet);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    left: 40px;
+    top: 110px;
+
+}
+.admin-panel__place__block__card__shapes__link svg{
+    fill: var(--gradient-blue);
+}
+
+#delete-place {
+    width: 150px;
+}
+
+
+.admin-panel__reviews {
+    padding-top: 35px;
+}   
+
+.content-reviews {
+    
+}
+
+
+
+
+.admin-panel__gallery {
+    padding-top: 35px;
+}
+
+.content-gallery {
+
+}
+
+
+
+@media (max-width: 1220px) {
+    .admin-panel__content {
+        justify-content: center;
+    } 
+}
+
+@media (max-width: 1200px) {
+    .admin-panel__requests, .admin-panel__users, 
+    .admin-panel__places, .admin-panel__reviews,
+    .admin-panel__gallery {
+        padding-top: 0;
+    }
+
+
+}
+
+@media (max-width: 500px) {
+    .admin-panel__user__block__card__avatar {
+        width: 90px;
+        height: 95px;
+    }
+
+    .admin-panel__user__block__card__description__name {
+        font-size: 14px;
+    }
+
+    .admin-panel__user__block__card__description__sentence {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .admin-panel__request__block {
+        width: 260px;
+    }
+
+    #accept {
+        width: 100px;
+    }
+
+    #decline {
+        width: 130px;
+    }
+
+
+    .admin-panel__user__block__card__avatar {
+        width: 80px;
+        height: 85px;
+    }
+
+    .admin-panel__user__block__card__description__name {
+        font-size: 10px;
+    }
+
+    .admin-panel__user__block__card__description__sentence {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    #accept {
+        width: 90px;
+    }
+
+    #decline {
+        width: 120px;
+    }
+}

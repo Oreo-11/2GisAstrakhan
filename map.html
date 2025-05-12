@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея</title>
-    <link rel="stylesheet" href="assets/css/header-search.css">
+    <title>Document</title>
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/globals.css">
-    <link rel="stylesheet" href="assets/css/alt-header.css">
-    <link rel="stylesheet" href="assets/css/gallery-page.css">
+    <link rel="stylesheet" href="assets/css/header-search.css">
+    <link rel="stylesheet" href="assets/css/map.css">
 </head>
 <body>
-    <img class="background__image" src="assets/images/gallery-background.png" alt="">
     <div class="header__moduleBlock">
         <div class="header__moduleBlock__logoExit">
             <div class="header__moduleBlock__logoExit__logo">
@@ -37,11 +35,6 @@
                 <li class="header__moduleBlock__menu__nav__item">
                     <a href="#" class="header__moduleBlock__menu__nav__item__link">
                         Карта
-                    </a>
-                </li>
-                <li class="header__moduleBlock__menu__nav__item">
-                    <a href="#" class="header__moduleBlock__menu__nav__item__link">
-                        История города
                     </a>
                 </li>
                 <li class="header__moduleBlock__menu__nav__item">
@@ -78,7 +71,7 @@
             </div>
         </div>
     </header>
-    <header class="header__search jost">
+    <header class="header__search__map jost">
         <div class="header__search__container">
             <img src="assets/images/header-logo.svg" alt="Логотип drive" class="header__search__container__logo">
             <nav class="header__search__container__nav">
@@ -91,11 +84,6 @@
                     <li class="header__search__container__nav__list__nav__item">
                         <a href="#" class="header__search__container__nav__list__nav__item__link">
                             Карта
-                        </a>
-                    </li>
-                    <li class="header__search__container__nav__list__nav__item">
-                        <a href="#" class="header__search__container__nav__list__nav__item__link">
-                            История города
                         </a>
                     </li>
                     <li class="header__search__container__nav__list__nav__item">
@@ -113,92 +101,52 @@
             </nav>
             <img src="assets/images/avatar.png" alt="Аватар профиля" class="header__search__container__profile">
         </div>
-        <div class="header__search__block">
-            <input type="text" class="header__search__block__input">
+        <div class="header__search__open__catalog">
+            <p>Развернуть каталог</p>
         </div>
     </header>
-
-    <main class="gallery">
-        <div class="gallery__container">
-            <h1 class="gallery__title">Взгляни на наш город!</h1>
-            <div class="gallery__content">
-                 <div class="gallery__image" id="img-1">
-                    <div class="gallery__review">
-                        <div class="gallery__review-avatar">
-                            <img src="assets/images/avatar.png" alt="avatar" width="48" class="avatar">
-                            <span class="avatar__name bellota-text">Автор</span>
-                        </div>
-                        <div class="gallery__review-description">
-                            <span class="description__title bellota-text-bold">
-                                Анастасия
-                            </span>
-                            <p class="description__content bellota-text">
-                                Это бар на улице такой-то, мне очень понравилось
-                            </p>
-                        </div>
-                    </div>
-                </div> 
-                <div class="gallery__image" id="img-2">
-                    <div class="gallery__review">
-                        <div class="gallery__review-avatar">
-                            <img src="assets/images/avatar.png" alt="avatar" width="48" class="avatar">
-                            <span class="avatar__name bellota-text">Автор</span>
-                        </div>
-                        <div class="gallery__review-description">
-                            <span class="description__title bellota-text-bold">
-                                Анастасия
-                            </span>
-                            <p class="description__content bellota-text">
-                                Это бар на улице такой-то, мне очень понравилось
-                            </p>
-                        </div>
-                    </div>
+    <div class="map__main">
+        <img src="assets/images/image 1 (2).png" alt="">
+    </div>
+    <div class="map__main__catalog">
+        <div class="map__main__catalog__scroll">
+            <h1>КАТАЛОГ</h1>
+            <div class="map__card bellota-text">
+                <img class="map__image" src="assets/images/Rectangle 227.png" alt="Хоппер" width="257" height="267">
+                <div class="map__score bellota-text-bold">
+                    4.5
                 </div>
-                <div class="gallery__image" id="img-3"></div>
-                <div class="gallery__image" id="img-4"></div>
-                <div class="gallery__image" id="img-5"></div>
-                <div class="gallery__image" id="img-6"></div>
-                <div class="gallery__image" id="img-7"></div>
-                <div class="gallery__image" id="img-8"></div>
-                <div class="gallery__image" id="img-9"></div>
-                <div class="gallery__image" id="img-10"></div>
-                <div class="gallery__image" id="img-11"></div>
-                <div class="gallery__image" id="img-12"></div>
-                <div class="gallery__image" id="img-13"></div>
-                <div class="gallery__image" id="img-14"></div> 
-                <div class="gallery__image" id="img-15"></div>
-                <div class="gallery__image" id="img-1">
-                    <div class="gallery__review">
-                        <div class="gallery__review-avatar">
-                            <img src="assets/images/avatar.png" alt="avatar" width="48" class="avatar">
-                            <span class="avatar__name bellota-text">Автор</span>
-                        </div>
-                        <div class="gallery__review-description">
-                            <span class="description__title bellota-text-bold">
-                                Анастасия
-                            </span>
-                            <p class="description__content bellota-text">
-                                Это бар на улице такой-то, мне очень понравилось
-                            </p>
-                        </div>
+                <div class="map__about">
+                    <h3 class="map__title bellota-text-bold">
+                        Хоппер
+                    </h3>
+                    <p class="map__address">
+                        ул. Ленина, 18/28
+                    </p>
+                    <div class="map__description">
+                        <p>
+                            Время работы:<br>
+                            18:00-04:00
+                        </p>
                     </div>
-                </div> 
-                <div class="gallery__image" id="img-2"></div>
-                <div class="gallery__image" id="img-3"></div>
-                <div class="gallery__image" id="img-4"></div>
-                <div class="gallery__image" id="img-5"></div>
-                <div class="gallery__image" id="img-6"></div>
-                <div class="gallery__image" id="img-7"></div>
-                <div class="gallery__image" id="img-8"></div>
-                <div class="gallery__image" id="img-9"></div>
-                <div class="gallery__image" id="img-10"></div>
-                <div class="gallery__image" id="img-11"></div>
-                <div class="gallery__image" id="img-12"></div>
-                <div class="gallery__image" id="img-13"></div>
-                <div class="gallery__image" id="img-14"></div> 
-                <div class="gallery__image" id="img-15"></div>
+                    <p class="map__avgcheck">
+                        Средний чек: 1000-2000
+                    </p>
+                </div>
+                <a href="#" class="map__link">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.292893 28.2929C-0.0976311 28.6834 -0.0976311 29.3166 0.292893 29.7071C0.683418 30.0976 1.31658 30.0976 1.70711 29.7071L0.292893 28.2929ZM30 0.999999C30 0.447716 29.5523 1.03477e-06 29 -5.66806e-07L20 -1.11471e-06C19.4477 -1.0319e-07 19 0.447714 19 1C19 1.55229 19.4477 2 20 2L28 2L28 10C28 10.5523 28.4477 11 29 11C29.5523 11 30 10.5523 30 10L30 0.999999ZM1.70711 29.7071L29.7071 1.70711L28.2929 0.292893L0.292893 28.2929L1.70711 29.7071Z"/>
+                    </svg>
+                        
+                </a>
+               
             </div>
         </div>
-    </main>
+    </div>
+    <script>
+        // headerSearch = document.querySelector(".header__search")
+        // headerSearch.style.width = "1114px"
+    </script>
+
 </body>
 </html>

@@ -7,7 +7,6 @@
 
 
 .bar__card {  
-    position: absolute;
     border: 1px solid var(--border-blue);
     border-radius: 20px;
     
@@ -20,13 +19,14 @@
 
     display: flex;
 
-    max-width: 1041px;
-    z-index: 1;
+    width: 1041px;
+    margin-bottom: 35px;
 }
 
 .bar__image {
     border-radius: 20px;
-
+    width: 257px;
+    height: 267px;
     margin: 20px;
 }
 
@@ -117,4 +117,1055 @@
 
 .bar__like svg {
     fill: var(--gradient-blue);
+}
+
+
+
+
+
+.bar__card__mobile {  
+    display: none;
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    color: var(--font-white);
+    box-shadow: 
+        inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), 
+        inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), 
+        inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+    background-color: rgba(196, 196, 196, 0);
+    backdrop-filter: blur(50px);
+
+    max-width: 619px;
+    margin-bottom: 35px;
+}
+
+.bar__image__mobile {
+    border-radius: 20px;
+
+    margin: 20px;
+}
+
+.bar__score__mobile {
+    width: 130px;
+    height: 55px;
+    background-color: var(--gradient-pink);
+    color: var(--ultraviolet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    left: 498px;
+    top: -12px;
+}
+
+.bar__about__mobile {
+    color: var(--font-white);
+
+    margin: 32px 112px 25px 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bar__title__mobile {
+
+}
+
+.bar__description__mobile {
+    font-size: 24px;
+}
+
+.bar__address__mobile {
+    font-size: 20px;
+}
+
+.bar__avgcheck__mobile {
+    font-size: 20px;
+}
+
+.bar__link__mobile {
+    position: absolute;
+    top: 355px;
+    left: 544px;
+    width: 84px;
+    height: 84px;
+    border: 1px solid var(--border-blue);
+    border-radius: 50%;
+    background-color: var(--ultraviolet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar__link__mobile svg {
+    fill: var(--gradient-blue);
+}
+
+.bar__like__mobile {
+    position: absolute;
+    top: 386px;
+    left: -28px;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--border-blue);
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar__like__mobile svg {
+    fill: var(--gradient-blue);
+}
+.bar__card__mobile__top{
+    display: flex;
+    justify-content: center;
+    margin-top: 19px;
+    align-items: center;
+}
+.bar__card__mobile__top__info{
+    margin-left: 42px;
+}
+.bar__card__mobile__top__info h1{
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+}
+.bar__card__mobile__top__info h2{
+    margin-top: 12px;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+.bar__card__mobile__top__info p{
+    font-size: 24px;
+}
+.bar__card__mobile__bottom p{
+    width: 481px;
+    margin-bottom: 35px;
+    margin-top: 14px;
+}
+.bar__card__mobile__bottom{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.bar__card__main__title h1{
+    font-family: 'PionerSansSemiBold';
+    font-size: 48px;
+    color:#F5F5F7;
+    margin-bottom: 33px;
+}
+
+.bar__card__main{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 55px;
+}
+.bar__card__main__right{
+    position: fixed;
+    width: 268px;
+    height: 990px;
+    top: 20px;
+    right: 0;
+    background: 
+    linear-gradient(#0F0331, #0F0331) padding-box,
+    linear-gradient(to bottom, var(--gradient-blue), var(--gradient-pink)) border-box;
+    border: 2px solid transparent;
+    border-radius: 20px 0px 20px 20px;
+    padding-left: 54px;
+    padding-right: 54px;
+}
+.bar__card__main__right h1{
+    color: #F5F5F7;
+    font-family: 'PionerSansSemiBold';
+}
+.bar__card__main__right__title h1{
+    font-size: 32px;
+}
+.bar__card__main__right__name__radioButton__title h1{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.bar__card__main__right__name__checkBox__title h1{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.bar__card__main__right__name__rate__title h1{
+    margin-bottom: 22px;
+    font-size: 20px;
+}
+.bar__card__main__right__name__price__title h1{
+    margin-bottom: 13px;
+    font-size: 20px;
+}
+.bar__card__main__right p{
+    color: #F5F5F7;
+    font-family: 'PionerSansLight';
+    font-size: 16px;
+}
+.bar__card__main__right__name__radioButton__radioButton__div input{
+    accent-color: #FA86A1;
+}
+.bar__card__main__right__name__checkBox__checkbox__div input{
+    accent-color: #FA86A1;
+}
+.bar__card__main__right__title{
+    margin-top: 61px;
+    margin-bottom: 64px;
+}
+.bar__card__main__right__name__radioButton__radioButton__div{
+    width: 224px;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__radioButton__radioButton__div:last-child{
+    width: 224px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__checkBox__checkbox__div{
+    width: 224px;
+    display: flex;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__checkBox__checkbox__div:last-child{
+    width: 224px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__rate__img{
+    margin-bottom: 39px;
+}
+.bar__card__main__right__name__price__input{
+    display: flex;
+    align-items: center;
+    width: 267px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__price__input input{
+    width: 97px;
+    border-radius: 10px;
+    height: 31px;
+    outline: none;
+    padding-left: 16px;
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #5771FC;
+    border: none;
+    filter: drop-shadow(0px 4px 5.8px rgba(69, 88, 182, 0.25));
+}
+.bar__card__main__right__name__price__input__stick{
+    width: 23px;
+    height: 1px;
+    background-color: #F5F5F5;
+}
+.bar__card__main__right__name__price__button button{
+    font-family: 'PionerSansBold';
+    margin-top: 53px;
+    width: 267px;
+    height: 41px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #5771FC;
+    color: #0F0F0F;
+    border-radius: 50px
+}
+
+
+
+
+
+
+
+
+
+.bar__card__main__right__mob{
+    display: flex;
+    justify-content: end;
+}
+.bar__card__main__right__mobile{
+    width: 774px;
+    height: 47px;
+    top: 20px;
+    z-index: 10;
+    display: none;
+    overflow: hidden;
+    right: 0;
+    background: var(--gradient-to-left);
+    border-radius: 20px 20px 0px 20px;
+    padding-left: 54px;
+    padding-right: 54px;
+}
+.bar__card__main__right__mobile h1{
+    color: #0F0331;
+    font-family: 'PionerSansSemiBold';
+}
+.bar__card__main__right__title__mobile h1{
+    font-size: 20px;
+}
+.bar__card__main__right__name__radioButton__title__mobile h1{
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.bar__card__main__right__name__checkBox__title__mobile h1{
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+.bar__card__main__right__name__rate__title__mobile h1{
+    margin-bottom: 6px;
+    font-size: 12px;
+}
+.bar__card__main__right__name__price__title__mobile h1{
+    margin-bottom: 16px;
+    font-size: 12px;
+}
+.bar__card__main__right__mobile p{
+    color: #0F0331;
+    font-family: 'PionerSansLight';
+    font-size: 10px;
+}
+.bar__card__main__right__name__radioButton__radioButton__div__mobile input{
+    accent-color: #FA86A1;
+}
+.bar__card__main__right__name__checkBox__checkbox__div__mobile input{
+    accent-color: #FA86A1;
+}
+.bar__card__main__right__title__mobile{
+    margin-top: 13px;
+    margin-bottom: 20px;
+}
+.bar__card__main__right__name__radioButton__radioButton__div__mobile{
+    width: 224px;
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__radioButton__radioButton__div__mobile:last-child{
+    width: 224px;
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__checkBox__checkbox__div__mobile{
+    width: 224px;
+    display: flex;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__checkBox__checkbox__div__mobile:last-child{
+    width: 224px;
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__rate__img__mobile{
+    margin-bottom: 14px;
+}
+.bar__card__main__right__name__price__input__mobile{
+    display: flex;
+    align-items: center;
+    width: 190px;
+    justify-content: space-between;
+}
+.bar__card__main__right__name__price__input__mobile input{
+    width: 69px;
+    border-radius: 10px;
+    height: 15px;
+    font-size: 10px;
+    outline: none;
+    padding-left: 10px;
+    font-family: "Bellota Text", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #5771FC;
+    border: none;
+    filter: drop-shadow(0px 4px 5.8px rgba(69, 88, 182, 0.25));
+}
+.bar__card__main__right__name__price__input__stick__mobile{
+    width: 16px;
+    height: 1px;
+    background-color: #0F0331;
+}
+.bar__card__main__right__name__price__button__mobile button{
+    font-family: 'PionerSansBold';
+    margin-top: 24px;
+    width: 245px;
+    height: 20px;
+    font-size: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #5771FC;
+    color: #0F0F0F;
+    border-radius: 50px
+}
+.bar__card__main__right__mobile__open{
+    animation-duration: 1s;
+    animation-name: bar__card__main__right__mobile__open;
+    animation-fill-mode:forwards;
+}
+.bar__card__main__right__mobile__close{
+    animation-duration: 1s;
+    animation-name: bar__card__main__right__mobile__close;
+    animation-fill-mode:forwards;
+}
+@keyframes bar__card__main__right__mobile__open {
+    from {
+        height: 47px;
+    }
+  
+    to {
+        height: 446px;
+    }
+}
+@keyframes bar__card__main__right__mobile__close {
+    from {
+        height: 446px;
+    }
+  
+    to {
+        height: 47px;
+    }
+}
+
+@media screen and (max-width:1735px) {
+    .bar__card {
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        display: flex;
+        max-width: 937px;
+        margin-bottom: 35px;
+    }
+    .bar__score {
+        width: 130px;
+        height: 55px;
+        background-color: var(--gradient-pink);
+        color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 820px;
+        top: 30px;
+    }
+    .bar__link {
+        position: absolute;
+        top: 256px;
+        left: 858px;
+        width: 84px;
+        height: 84px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1545px) {
+    .bar__card__main__right {
+        position: fixed;
+        width: 268px;
+        height: 990px;
+        top: 146px;
+        right: 0;
+        background: linear-gradient(#0F0331, #0F0331) padding-box, linear-gradient(to bottom, var(--gradient-blue), var(--gradient-pink)) border-box;
+        border: 2px solid transparent;
+        border-radius: 20px 0px 20px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card {
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        display: flex;
+        max-width: 847px;
+        margin-bottom: 35px;
+    }
+    .bar__score {
+        width: 130px;
+        height: 55px;
+        background-color: var(--gradient-pink);
+        color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 730px;
+        top: 30px;
+    }
+    .bar__link {
+        position: absolute;
+        top: 294px;
+        left: 773px;
+        width: 84px;
+        height: 84px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:1400px) {
+    .bar__card__mobile {  
+        display: block;
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        color: var(--font-white);
+        box-shadow: 
+            inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), 
+            inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), 
+            inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+    
+        max-width: 619px;
+        margin-bottom: 35px;
+    }
+    .bar__card {
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        display: none;
+        max-width: 847px;
+        margin-bottom: 35px;
+    }
+}
+@media screen and (max-width:1140px) {
+    .bar__card__main__right__mobile{
+        width: 774px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        display: block;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__main__right {
+        display: none;
+        position: fixed;
+        width: 268px;
+        height: 990px;
+        top: 146px;
+        right: 0;
+        background: linear-gradient(#0F0331, #0F0331) padding-box, linear-gradient(to bottom, var(--gradient-blue), var(--gradient-pink)) border-box;
+        border: 2px solid transparent;
+        border-radius: 20px 0px 20px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__mobile {
+        display: block;
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        color: var(--font-white);
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        max-width: 619px;
+        margin: 0 auto;
+        margin-bottom: 35px;
+    }
+    .bar__card__main__title h1 {
+        font-family: 'PionerSansSemiBold';
+        font-size: 48px;
+        color: #F5F5F7;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:920px) {
+    .bar__card__main__right__mobile {
+        width: 695px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__mobile {
+        display: block;
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        color: var(--font-white);
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        max-width: 484px;
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+    .bar__card__mobile__top__img img{
+        width: 187px;
+    }
+    .bar__card__mobile__top__info h1 {
+        font-family: "Bellota Text", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 26px;
+    }
+    .bar__card__mobile__top__info h2 {
+        margin-top: 12px;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    .bar__card__mobile__top__info p {
+        font-size: 14px;
+    }
+    .bar__card__mobile__bottom p {
+        width: 342px;
+        margin-bottom: 35px;
+        margin-top: 14px;
+    }
+    .bar__score__mobile {
+        width: 119px;
+        height: 46px;
+        background-color: var(--gradient-pink);
+        color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 376px;
+        top: -12px;
+        font-size: 26px;
+    }
+    .bar__link__mobile {
+        position: absolute;
+        top: 335px;
+        left: 441px;
+        width: 52px;
+        height: 52px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bar__like__mobile {
+        position: absolute;
+        top: 335px;
+        left: -12px;
+        width: 52px;
+        height: 52px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: rgba(217, 217, 217, 0.3);
+        background: url("../images/Ellipse 35.png") no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+    }
+}
+@media screen and (max-width:830px) {
+    .bar__card__main__right__mobile {
+        width: 642px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__main__title h1 {
+        font-family: 'PionerSansSemiBold';
+        font-size: 40px;
+        color: #F5F5F7;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+}
+@media screen and (max-width:780px) {
+    .bar__card__main__right__mobile {
+        width: 558px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+@media screen and (max-width:690px) {
+    .bar__card__main__right__mobile {
+        width: 512px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__main__title h1 {
+        font-family: 'PionerSansSemiBold';
+        font-size: 30px;
+        color: #F5F5F7;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+    .bar__card__mobile {
+        display: block;
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        color: var(--font-white);
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        max-width: 396px;
+        margin: 0 auto;
+        margin-bottom: 45px;
+    }
+    .bar__score__mobile {
+        width: 119px;
+        height: 46px;
+        background-color: var(--gradient-pink);
+        color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 293px;
+        top: -12px;
+        font-size: 26px;
+    }
+    .bar__link__mobile {
+        position: absolute;
+        top: 335px;
+        left: 357px;
+        width: 52px;
+        height: 52px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bar__card__main__right__mobile {
+        width: 452px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+@media screen and (max-width:580px) {
+    .bar__card__main__right__mobile {
+        width: 395px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__mobile {
+        display: block;
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        color: var(--font-white);
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+    .bar__card__mobile__top__img img {
+        width: 122px;
+    }
+    .bar__card__mobile__top__info h1 {
+        font-family: "Bellota Text", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 16px;
+    }
+    .bar__score__mobile {
+        width: 62px;
+        height: 34px;
+        background-color: var(--gradient-pink);
+        color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 245px;
+        top: -8px;
+        font-size: 16px;
+    }
+    .bar__card__mobile__top__info h2 {
+        margin-top: 12px;
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+    .bar__card__mobile__top__info p {
+        font-size: 10px;
+    }
+    .bar__card__mobile__top__info {
+        margin-left: 28px;
+    }
+    .bar__card__mobile__bottom p {
+        width: 229px;
+        margin-bottom: 35px;
+        margin-top: 14px;
+        font-size: 10px;
+    }
+    .bar__like__mobile {
+        position: absolute;
+        top: 242px;
+        left: -12px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: rgba(217, 217, 217, 0.3);
+        background: url("../images/Ellipse 35.png") no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: contain;
+    }
+    .bar__like__mobile svg{
+        width: 26px;
+        height: 24px;
+    }
+    .bar__link__mobile {
+        position: absolute;
+        top: 242px;
+        left: 269px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bar__link__mobile svg{
+        width: 16px;
+        height: 16px;
+    }
+}
+@media screen and (max-width:530px) {
+    .bar__card__main__title h1 {
+        font-family: 'PionerSansSemiBold';
+        font-size: 24px;
+        color: #F5F5F7;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+    .bar__card__main__right__mobile {
+        width: 326px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+@media screen and (max-width:470px) {
+    .bar__card__main__right__mobile {
+        width: 303px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+@media screen and (max-width:425px) {
+    .bar__card__main__right__mobile {
+        width: 272px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+@media screen and (max-width:390px) {
+    .bar__card__main__right__mobile {
+        width: 250px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__main__title h1 {
+        font-family: 'PionerSansSemiBold';
+        font-size: 20px;
+        color: #F5F5F7;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+    .bar__card__mobile {
+        display: block;
+        border: 1px solid var(--border-blue);
+        border-radius: 20px;
+        color: var(--font-white);
+        box-shadow: inset 0px -80px 65px 0px rgba(87, 113, 252, 40%), inset 0px 1px 40px 0px rgba(88, 113, 252, 40%), inset 0px 4px 16px 0px rgba(88, 113, 252, 40%);
+        background-color: rgba(196, 196, 196, 0);
+        backdrop-filter: blur(50px);
+        max-width: 260px;
+        margin: 0 auto;
+        margin-bottom: 33px;
+    }
+    .bar__score__mobile {
+        width: 62px;
+        height: 34px;
+        background-color: var(--gradient-pink);
+        color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        position: absolute;
+        left: 209px;
+        top: -8px;
+        font-size: 16px;
+    }
+    .bar__card__main__right__mobile {
+        width: 222px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__link__mobile {
+        position: absolute;
+        top: 242px;
+        left: 231px;
+        width: 38px;
+        height: 38px;
+        border: 1px solid var(--border-blue);
+        border-radius: 50%;
+        background-color: var(--ultraviolet);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media screen and (max-width:338px) {
+    .bar__card__main__right__mobile {
+        width: 204px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+}
+@media screen and (max-width:327px) {
+    .bar__card__main__title h1 {
+        font-family: 'PionerSansSemiBold';
+        font-size: 19px;
+        color: #F5F5F7;
+        margin-bottom: 33px;
+        text-align: center;
+    }
+    .bar__card__main__right__mobile {
+        width: 190px;
+        height: 47px;
+        top: 20px;
+        z-index: 10;
+        overflow: hidden;
+        right: 0;
+        background: var(--gradient-to-left);
+        border-radius: 20px 20px 0px 20px;
+        padding-left: 54px;
+        padding-right: 54px;
+    }
+    .bar__card__main__right__title__mobile h1 {
+        font-size: 19px;
+    }
 }
