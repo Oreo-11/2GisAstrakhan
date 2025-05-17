@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\UserImageController;
+use App\Http\Controllers\Api\FavouriteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,4 +34,10 @@ Route::prefix('users-gallery')->group(function () {
     Route::get('/{id}', [UserImageController::class, 'show']);
     Route::put('/{id}', [UserImageController::class, 'update']);
     Route::delete('/{id}', [UserImageController::class, 'destroy']);
+});
+
+Route::prefix('favourites')->group(function () {
+    Route::post('/{restaurant}', [FavouriteController::class, 'addFavourite']);
+    Route::delete('/{restaurant}', [FavouriteController::class, 'removeFavourite']);
+    Route::get('/list/{user_id}', [FavouriteController::class, 'listFavourites']);
 });

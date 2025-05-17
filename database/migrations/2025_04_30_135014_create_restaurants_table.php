@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('restaraunts', function (Blueprint $table) {
+        Schema::create('restaurants', function (Blueprint $table) {
             $table->engine('InnoDB');
 
             $table->charset('utf8mb4');
@@ -19,11 +19,11 @@ return new class extends Migration
 
             $table->id();
             $table->string('title');
-            $table->string('description');
-            $table->timestamp('worktime_start');
-            $table->timestamp('worktime_end');
+            $table->text('description');
+            $table->time('worktime_start');
+            $table->time('worktime_end');
             $table->string('phone');
-            $table->string('restaraunt_site_url');
+            $table->string('restaurant_site_url');
             $table->string('address');
             $table->string('average_price');
             $table->double('coordX');
@@ -31,14 +31,15 @@ return new class extends Migration
             $table->string('owner_name');
             $table->string('owner_surname');
             $table->string('owner_patronymic');
-            $table->string('restaraunt_mail');
-            $table->integer('INN');
-            $table->integer('KPP');
-            $table->integer('OGRN');
+            $table->string('restaurant_mail');
+            $table->string('INN');
+            $table->string('KPP');
+            $table->string('OGRN');
             $table->string('telegram_url');
-            $table->string('whatsApp_url');
+            $table->string('whatsapp_url');
             $table->string('vk_url');
             $table->tinyInteger('status');
+            $table->float('rating')->nullable();
         });
     }
 
@@ -47,6 +48,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('restaraunts');
+        Schema::dropIfExists('restaurants');
     }
 };

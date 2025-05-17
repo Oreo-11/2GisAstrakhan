@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserImageRequest;
 use App\Http\Requests\UpdateUserImageRequest;
 use App\Http\Resources\UserImageResource;
-use App\Services\User\UserImageService;
+use App\Services\UserImageService;
 use Illuminate\Http\JsonResponse;
 
 class UserImageController extends Controller

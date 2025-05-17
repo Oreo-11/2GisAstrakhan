@@ -3,27 +3,26 @@
 namespace Database\Factories;
 
 use App\Models\Restaurant;
+use App\Models\RestaurantImage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\MenuPosition>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\RestaurantImage>
  */
-class MenuPositionFactory extends Factory
+class RestaurantImageFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
      * @return array<string, mixed>
      */
+    protected $model = RestaurantImage::class;
+    
     public function definition(): array
     {
-        $types = ['cocktail', 'salade', 'main', 'pizza', 'burger'];
         return [
             'restaurant_id' => Restaurant::inRandomOrder()->first()->id ?? Restaurant::factory()->create()->id,
-            'title' => $this->faker->word(),
-            'description' => $this->faker->paragraph(3),
-            'price' => $this->faker->numberBetween(150, 1500),
-            'type' => $types[array_rand($types)],
+            'src' => $this->faker->imageUrl(640, 480, 'restaurant', true) ?: 'https://default.image.url',
         ];
     }
 }

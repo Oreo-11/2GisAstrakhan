@@ -10,10 +10,10 @@ class MenuPosition extends Model
 {
     use HasFactory;
 
-    protected $table = 'price_list';
+    public $timestamps = false;
 
-    public function restaraunt() : BelongsTo
+    public function restaurant() : BelongsTo
     {
-        return $this->belongsTo(Restaraunt::class);
+        return $this->belongsTo(Restaurant::class);
     }
 }

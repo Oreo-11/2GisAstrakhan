@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_favourite_restaraunts', function (Blueprint $table) {
+        Schema::create('users_rating_restaurants', function (Blueprint $table) {
             $table->engine('InnoDB');
 
             $table->charset('utf8mb4');
             $table->collation('utf8mb4_unicode_ci');
 
             $table->id();
+            $table->integer('restaurant_id');
             $table->integer('user_id');
-            $table->integer('restaraunt_id');
+            $table->float('rating');
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users_favourite_restaraunts');
+        Schema::dropIfExists('users_rating_restaurants');
     }
 };

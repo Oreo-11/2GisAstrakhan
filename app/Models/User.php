@@ -20,6 +20,6 @@ class User extends Model
 
     public function favourites() : BelongsToMany
     {
-        return $this->belongsToMany(Restaraunt::class, 'users_favourite_restaraunts', 'user_id', 'restaraunt_id');
+        return $this->belongsToMany(Restaurant::class, 'favourites');
     }
 }

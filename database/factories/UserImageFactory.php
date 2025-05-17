@@ -5,7 +5,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 use App\Models\User;
-
+use App\Models\UserImage;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\UserImage>
@@ -17,6 +17,8 @@ class UserImageFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = UserImage::class;
+
     public function definition(): array
     {
         return [

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\User;
+namespace App\Services;
 
 use App\Models\UserImage;
 use Illuminate\Database\Eloquent\Collection;
