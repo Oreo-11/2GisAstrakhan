@@ -22,11 +22,25 @@ class FavouriteService
         return $user->favourites()->detach($restaurantId) > 0;
     }
 
-    public function getUserFavouritesWithImages(int $userId)
+    public function getUserFavouritesWithImage(int $userId)
     {
         return User::findOrFail($userId)
             ->favourites()
             ->with('mainImage')
             ->get();
     }
+
+    public function  getFavouritesRestaurantsId(int $userId) : Array
+    {
+        $favouriteRestaurants = User::findOrFail($userId)
+                    ->favourites()
+                    ->get();
+        
+        $restaurantsId = [];
+        foreach ($favouriteRestaurants as $favouriteRestaurant) {
+            $restaurantsId[] = $favouriteRestaurant->id;
+        }
+
+        return $restaurantsId;
+    }  
 }

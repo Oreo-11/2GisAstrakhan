@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\FavouriteResource;
+use App\Http\Resources\RestaurantResource;
+use App\Models\Restaurant;
 use App\Models\User;
 use App\Services\FavouriteService;
 use Illuminate\Http\JsonResponse;
@@ -34,11 +35,21 @@ class FavouriteController extends Controller
 
     public function listFavourites(int $userId): JsonResponse
     {
-        $favourites = $this->favouriteService->getUserFavouritesWithImages($userId);
+        $favourites = $this->favouriteService->getUserFavouritesWithImage($userId);
 
         return response()->json([
             'success' => true,
-            'data' => FavouriteResource::collection($favourites)
+            'data' => RestaurantResource::collection($favourites)
+        ]);
+    }
+
+    public function listFavouritesId(int $userId) : JsonResponse
+    {
+        $favouritesId  = $this->favouriteService->getFavouritesRestaurantsId($userId);
+
+        return response()->json([
+            'success' => true,
+            'data' => $favouritesId,
         ]);
     }
 }

@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\UserImageController;
 use App\Http\Controllers\Api\FavouriteController;
+use App\Http\Controllers\Api\MapController;
+use App\Http\Controllers\Api\RestaurantController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,8 +38,17 @@ Route::prefix('users-gallery')->group(function () {
     Route::delete('/{id}', [UserImageController::class, 'destroy']);
 });
 
+Route::prefix('restaurants')->group(function (){
+    Route::get('/', [RestaurantController::class, 'index']);
+});
+
 Route::prefix('favourites')->group(function () {
-    Route::post('/{restaurant}', [FavouriteController::class, 'addFavourite']);
-    Route::delete('/{restaurant}', [FavouriteController::class, 'removeFavourite']);
-    Route::get('/list/{user_id}', [FavouriteController::class, 'listFavourites']);
+    Route::post('/{restaurant_id}', [FavouriteController::class, 'addFavourite']);
+    Route::delete('/{restaurant_id}', [FavouriteController::class, 'removeFavourite']);
+    Route::get('/list/id/{user_id}', [FavouriteController::class, 'listFavouritesId']);
+    Route::get('/list/user/{user_id}', [FavouriteController::class, 'listFavourites']);
+});
+
+Route::prefix('map')->group(function () {
+    Route::get('/', [MapController::class, 'index']);
 });
