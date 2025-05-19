@@ -25,6 +25,7 @@ class UserImageFactory extends Factory
             'user_id' => User::inRandomOrder()->first()->id ?? User::factory()->create()->id,
             'description' => $this->faker->sentence(6) ?: 'Default description',
             'src' => $this->faker->imageUrl(640, 480, 'nature', true) ?: 'https://default.image.url',
+            'status' => $this->faker->boolean(),
         ];
     }
 }

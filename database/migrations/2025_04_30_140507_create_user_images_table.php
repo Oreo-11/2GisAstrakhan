@@ -25,7 +25,9 @@ return new class extends Migration
                     ->cascadeOnUpdate()
                     ->cascadeOnDelete();;
             $table->text('description');
-            $table->string('src')->default('');
+            $table->string('src');
+            $table->boolean('status');
+            
         });
     }
 

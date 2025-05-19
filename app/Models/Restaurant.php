@@ -29,6 +29,12 @@ class Restaurant extends Model
         return $this->hasOne(RestaurantImage::class)->oldestOfMany();
     }
 
+    public function reviews() : HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
+
+
     // public function menuList(): HasMany
     // {
     //     return $this->hasMany(MenuPosition::class);

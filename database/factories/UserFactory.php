@@ -23,14 +23,26 @@ class UserFactory extends Factory
     //Определяем тестовую структуру данных
     public function definition(): array
     {
+        $reasons = ['Спам', 'Егор', 'Лиза'];
+
+        $status = $this->faker->boolean();
+
+        $status    
+            ? $reason = '' 
+            : $reason =  $reasons[array_rand($reasons)];
+
+
         return [
             'name' => $this->faker->firstName(),
             'surname' => $this->faker->lastName(),
+            'patronymic' => $this->faker->firstName('male'),
             'login' => $this->faker->unique()->userName(),
             'password' => Hash::make('password'),
+            'email' => $this->faker->email(),
             'age' => $this->faker->numberBetween(16, 80),
             'sex' => $this->faker->boolean(),
-            'status' => $this->faker->boolean(),
+            'status' => $status,
+            'reason' => $reason,
             'src' => $this->faker->imageUrl(50, 50, 'avatars'),
             'last_entry' => $this->faker->dateTimeThisYear(), 
         ];

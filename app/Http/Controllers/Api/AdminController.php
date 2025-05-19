@@ -3,47 +3,55 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\AdminUnresolvedRestaurantResource;
+use App\Http\Resources\AdminRestaurantResource;
+use App\Http\Resources\AdminUserResource;
+use App\Services\RestaurantService;
+use App\Services\UserService;
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class AdminController extends Controller
 {
+    public function __construct(
+        protected RestaurantService $restaurantService,
+        protected UserService $userService,
+    )
+    {}
+
     /**
-     * Display a listing of the resource.
+     * Передает заведения с status = false
      */
-    public function index()
+    public function listAdminUnresolvedRestaurants() : JsonResponse 
     {
-        //
+        $unresolvedRestaurants = $this->restaurantService->getUnresolvedRestaurants();
+
+        return response()->json([
+            'success' => true,
+            'data' => AdminUnresolvedRestaurantResource::collection($unresolvedRestaurants),
+        ]);
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 
      */
-    public function store(Request $request)
+    public function listAdminUsers() : JsonResponse 
     {
-        //
-    }
+        $users = $this->userService->getAllUsers();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
+        return response()->json([
+            'success' => true,
+            'data' => AdminUserResource::collection($users),
+        ]);
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
+    
+    public function listAdminRestaurants() : JsonResponse
     {
-        //
-    }
+        $restaurants = $this->restaurantService->getRestaurantsWithImageAdmin();
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return response()->json([
+            'success' => true,
+            'data' => AdminRestaurantResource::collection($restaurants),
+        ]);
     }
 }

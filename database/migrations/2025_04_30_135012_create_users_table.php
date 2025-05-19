@@ -20,11 +20,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
+            $table->string('patronymic');
             $table->string('login');
             $table->string('password');
+            $table->string('email');
             $table->integer('age');
             $table->tinyInteger('sex');
             $table->tinyInteger('status');
+            $table->string('reason');
             $table->string('src');
             $table->timestamp('last_entry');
         });

@@ -8,6 +8,8 @@ use App\Http\Controllers\Api\UserImageController;
 use App\Http\Controllers\Api\FavouriteController;
 use App\Http\Controllers\Api\MapController;
 use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Api\AdminController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,12 @@ use App\Http\Controllers\Api\RestaurantController;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('admin')->group(function() {
+    Route::get('/requests', [AdminController::class, 'listAdminUnresolvedRestaurants']);
+    Route::get('/users', [AdminController::class, 'listAdminUsers']);
+    Route::get('/restaurants', [AdminController::class, 'listAdminRestaurants']);
 });
 
 Route::prefix('users')->group(function () {

@@ -12,7 +12,9 @@ class UserImageService
      */
     public function getUserImage(int $userId): Collection
     {
-        return UserImage::where('user_id', $userId)->get();
+        return UserImage::where('user_id', $userId)
+                            ->where('status', true)
+                            ->get();
     }
 
     /**
@@ -20,7 +22,9 @@ class UserImageService
      */
     public function getImage(int $id): ?UserImage
     {
-        return UserImage::with('user:id,name,src')->find($id);
+        return UserImage::where('status', true)
+                            ->with('user:id,name,src')
+                            ->find($id);
     }
 
     /**

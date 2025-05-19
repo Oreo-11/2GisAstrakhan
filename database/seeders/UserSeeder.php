@@ -18,9 +18,12 @@ class UserSeeder extends Seeder
         User::factory()->create([
             'name' => 'Admin',
             'surname' => 'Adminov',
+            'patronymic' => 'Adminovich',
             'login' => 'admin',
             'password' => bcrypt('admin123'),
+            'email' => 'admin@mail.ru',
             'status' => true,
+            'reason' => '',
             'src' => 'https://example.com/admin-avatar.jpg',
         ]);
 

@@ -8,9 +8,14 @@ use Illuminate\Database\Eloquent\Collection;
 
 class RestaurantService
 {
-    public function getRestaurants() : Collection
+    public function getAllRestaurants() : Collection
     {
         return Restaurant::all();
+    }
+
+    public function getUnresolvedRestaurants() : Collection
+    {
+        return Restaurant::where('status', false)->get();
     }
 
     public  function getRestaurantsWithImage() : Collection
@@ -18,9 +23,17 @@ class RestaurantService
         return Restaurant::where('status', true)->with('mainImage')->get();
     }
 
-    public function getRestaurantsWithImages(): Collection
+    public function getRestaurantsWithImages() : Collection
     {
         return Restaurant::where('status', true)->with('images')->get();
+    }
+
+    public function getRestaurantsWithImageAdmin() : Collection
+    {
+        return Restaurant::where('status', true)
+                            ->with('mainImage')
+                            ->with('reviews')
+                            ->get();
     }
  
 }

@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
+use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Database\Eloquent\Collection;
 
 class UserService
@@ -13,7 +14,10 @@ class UserService
      */
     public static function getAllUsers(): Collection
     {
-        return User::all();
+        return User::whereNot(function (Builder $query) {
+            $query->where('id', 1);
+            })
+            ->get();
     }
 
     /**
