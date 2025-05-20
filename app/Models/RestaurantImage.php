@@ -10,11 +10,15 @@ class RestaurantImage extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'restaurant_id',
+        'src',
+    ];
+
     public $timestamps = false;
 
-    public function restaurant() : BelongsTo 
+    public function restaurant(): BelongsTo
     {
         return $this->belongsTo(Restaurant::class);
     }
-    
 }

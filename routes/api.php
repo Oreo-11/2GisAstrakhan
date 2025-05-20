@@ -1,5 +1,11 @@
 <?php
 
+
+use App\Http\Middleware\UserTokenIsValid;
+use App\Http\Middleware\AdminTokenIsValid;
+
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,40 +33,42 @@ use App\Http\Controllers\Api\ReviewController;
 |
 */
 
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::prefix('admin')->group(function() {
-    Route::prefix('requests')->group(function() {
-            Route::get('/all', [AdminRestaurantRequestController::class, 'index']);
-            Route::put('/accept/{restaurant_id}', [AdminRestaurantRequestController::class, 'update']);
-            Route::delete('/decline/{restaurant_id}', [AdminRestaurantRequestController::class, 'destroy']);
+Route::prefix('admin')->group(function () {
+    Route::prefix('requests')->group(function () {
+        Route::get('/all', [AdminRestaurantRequestController::class, 'index']);
+        Route::put('/accept/{restaurant_id}', [AdminRestaurantRequestController::class, 'update']);
+        Route::delete('/decline/{restaurant_id}', [AdminRestaurantRequestController::class, 'destroy']);
     });
-    Route::prefix('users')->group(function() {
-            Route::get('/all', [AdminUserController::class, 'index']);
-            Route::put('/unban/{user_id}', [AdminUserController::class, 'update']);
+    Route::prefix('users')->group(function () {
+        Route::get('/all', [AdminUserController::class, 'index']);
+        Route::put('/unban/{user_id}', [AdminUserController::class, 'update']);
     });
-    Route::prefix('restaurants')->group(function() {
-            Route::get('/all', [AdminRestaurantController::class, 'index']);
-            Route::delete('/delete/{restaurant_id}', [AdminRestaurantController::class, 'destroy']);    
+    Route::prefix('restaurants')->group(function () {
+        Route::get('/all', [AdminRestaurantController::class, 'index']);
+        Route::delete('/delete/{restaurant_id}', [AdminRestaurantController::class, 'destroy']);
     });
-    Route::prefix('reviews')->group(function() {
-            Route::get('/all', [AdminReviewController::class, 'index']);
-            Route::delete('/delete/{review_id}', [AdminReviewController::class, 'destroy']);    
+    Route::prefix('reviews')->group(function () {
+        Route::get('/all', [AdminReviewController::class, 'index']);
+        Route::delete('/delete/{review_id}', [AdminReviewController::class, 'destroy']);
     });
-    Route::prefix('gallery')->group(function() {
-            Route::get('/all', [AdminGalleryController::class, 'index']);
-            Route::put('/accept/{image_id}', [AdminGalleryController::class, 'update']);
-            Route::delete('/decline/{image_id}', [AdminGalleryController::class, 'destroy']);
+    Route::prefix('gallery')->group(function () {
+        Route::get('/all', [AdminGalleryController::class, 'index']);
+        Route::put('/accept/{image_id}', [AdminGalleryController::class, 'update']);
+        Route::delete('/decline/{image_id}', [AdminGalleryController::class, 'destroy']);
     });
-    
 });
 
 Route::prefix('users')->group(function () {
     Route::get('/', [UserController::class, 'index']);
     Route::get('/active', [UserController::class, 'active']);
     Route::get('/{id}', [UserController::class, 'show']);
+    Route::post('/auth', [UserController::class, 'auth']);
+    Route::post('/register', [UserController::class, 'register']);
 });
 
 Route::prefix('users-gallery')->group(function () {
@@ -71,12 +79,13 @@ Route::prefix('users-gallery')->group(function () {
     Route::delete('/{id}', [UserImageController::class, 'destroy']);
 });
 
-Route::prefix('restaurants')->group(function (){
+Route::prefix('restaurants')->group(function () {
     Route::get('/', [RestaurantController::class, 'index']);
+    Route::post('/create', [RestaurantController::class, 'createRestaurant']);
 });
 
 Route::prefix('favourites')->group(function () {
-    Route::post('/{restaurant_id}', [FavouriteController::class, 'addFavourite']);
+    Route::post('/{restaurant_id}', [FavouriteController::class, 'addFavourite'])->middleware(AdminTokenIsValid::class);
     Route::delete('/{restaurant_id}', [FavouriteController::class, 'removeFavourite']);
     Route::get('/list/id/{user_id}', [FavouriteController::class, 'listFavouritesId']);
     Route::get('/list/user/{user_id}', [FavouriteController::class, 'listFavourites']);
@@ -90,5 +99,4 @@ Route::prefix('restaurants/{restaurant_id}/reviews')->group(function () {
     Route::get('/', [ReviewController::class, 'index']);
     Route::post('/', [ReviewController::class, 'store']);
     Route::delete('/{review}', [ReviewController::class, 'destroy']);
-    
 });
