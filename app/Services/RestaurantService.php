@@ -13,11 +13,6 @@ class RestaurantService
         return Restaurant::all();
     }
 
-    public function getUnresolvedRestaurants() : Collection
-    {
-        return Restaurant::where('status', false)->get();
-    }
-
     public  function getRestaurantsWithImage() : Collection
     {
         return Restaurant::where('status', true)->with('mainImage')->get();
@@ -27,6 +22,30 @@ class RestaurantService
     {
         return Restaurant::where('status', true)->with('images')->get();
     }
+    
+    public function deleteRestaurant(int $restaurantId): bool
+    {        
+        return Restaurant::deleteWithRelations($restaurantId);
+    }
+
+
+    //Admin
+
+    public function getRestaurantRequests() : Collection
+    {
+        return Restaurant::where('status', false)->get();
+    }
+
+    public function acceptRestaurantRequest(int $restaurantId): bool
+    {
+        return Restaurant::where('id', $restaurantId)->update(['status' => true]);
+    }
+
+    public function declineRestaurantRequest(int $restaurantId): bool
+    {
+        return Restaurant::destroy($restaurantId);
+    }
+
 
     public function getRestaurantsWithImageAdmin() : Collection
     {
@@ -35,5 +54,6 @@ class RestaurantService
                             ->with('reviews')
                             ->get();
     }
- 
+
+    
 }

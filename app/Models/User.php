@@ -22,4 +22,28 @@ class User extends Model
     {
         return $this->belongsToMany(Restaurant::class, 'favourites');
     }
+
+    public function reviews() : HasMany
+    {
+        return $this->hasMany(Review::class);
+    }
+
+    public static function deleteWithRelations(int $id): bool
+    {
+        $user = self::with(['favourites', 'reviews', 'image'])->find($id);
+        
+        if (!$user) {
+            return false;
+        }
+
+        // Удаляем все связи
+        $user->favourites()->detach();
+        
+        // Удаляем связанные записи
+        $user->reviews()->delete();
+        $user->image()->delete();
+        
+        // Удаляем пользователя
+        return $user->delete();
+    }
 }

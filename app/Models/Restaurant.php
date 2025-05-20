@@ -34,6 +34,36 @@ class Restaurant extends Model
         return $this->hasMany(Review::class);
     }
 
+    /**
+     * Расчет рейтинга
+     */
+    public function averageRating()
+    {
+        return $this->reviews()->avg('rate') ?? 0;
+    }
+
+    /**
+     * Удаление ресторана со всеми связанными записями
+     */
+    public static function deleteWithRelations(int $id): bool
+    {
+        $restaurant = self::with(['reviews', 'images', 'favouritedBy'])->find($id);
+        
+        if (!$restaurant) {
+            return false;
+        }
+
+        // Удаляем все связи
+        $restaurant->favouritedBy()->detach();
+        
+        // Удаляем связанные записи
+        $restaurant->reviews()->delete();
+        $restaurant->images()->delete();
+        
+        // Удаляем сам ресторан
+        return $restaurant->delete();
+    }
+
 
     // public function menuList(): HasMany
     // {

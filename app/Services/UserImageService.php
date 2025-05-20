@@ -50,4 +50,22 @@ class UserImageService
     {
         return UserImage::destroy($id);
     }
+
+    
+    // Admin
+
+    public function getUnresolvedUsersImages() : Collection
+    {
+        return UserImage::where('status', false)->get();
+    }
+
+    public function acceptUserImage(int $imageId): bool
+    {
+        return UserImage::where('id', $imageId)->update(['status' => true]);
+    }
+
+    public function declineUserImage(int $imageId): bool
+    {
+        return UserImage::destroy($imageId);
+    }
 }
