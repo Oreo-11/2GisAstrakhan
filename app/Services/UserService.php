@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\User;
+use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Validator;
@@ -113,13 +114,6 @@ class UserService
         }
     }
 
-    /**
-     * Получить всех пользователей
-     */
-    public static function getAllUsers(): Collection
-    {
-        return User::all();
-    }
 
     /**
      * Получить пользователя по ID
@@ -135,5 +129,32 @@ class UserService
     public function getActiveUsers(): Collection
     {
         return User::where('status', 1)->get();
+    }
+
+    public function deleteUser(int $userId) : bool 
+    {
+        return User::where('id', $userId)->delete();
+    }
+
+
+
+    // Admin
+
+    public function getAllUsers() : Collection
+    {
+        return User::whereNot(function (Builder $query) {
+            $query->where('id', 1);
+            })
+            ->get();
+    }
+
+    public function unbanUser(int $userId) : bool
+    {
+        return User::where('id', $userId)->update(['status' => true]);
+    }
+
+    public function banUser(int $userId) : bool
+    {
+        return User::where('id', $userId)->update(['status' => false]);
     }
 }
