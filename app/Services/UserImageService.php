@@ -10,7 +10,7 @@ class UserImageService
     /**
      * Получить все изображения пользователя
      */
-    public function getUserImage(int $userId): Collection
+    public function getUserImages(int $userId): Collection
     {
         return UserImage::where('user_id', $userId)
                             ->where('status', true)

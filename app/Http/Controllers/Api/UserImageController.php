@@ -20,7 +20,7 @@ class UserImageController extends Controller
      */
     public function index(int $userId): JsonResponse
     {
-        $userImages = $this->userImageService->getUserImage($userId);
+        $userImages = $this->userImageService->getUserImages($userId);
 
         return response()->json([
             'success' => true,

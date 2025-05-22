@@ -13,7 +13,7 @@ class RestaurantService
         return Restaurant::all();
     }
 
-    public  function getRestaurantsWithImage() : Collection
+    public function getRestaurantsWithImage() : Collection
     {
         return Restaurant::where('status', true)->with('mainImage')->get();
     }

@@ -14,6 +14,7 @@ use App\Http\Controllers\Api\Admin\AdminRestaurantController;
 use App\Http\Controllers\Api\Admin\AdminRestaurantRequestController;
 use App\Http\Controllers\Api\Admin\AdminReviewController;
 use App\Http\Controllers\Api\Admin\AdminUserController;
+use App\Http\Controllers\Api\GalleryController;
 use App\Http\Controllers\Api\ReviewController;
 
 /*
@@ -63,7 +64,7 @@ Route::prefix('users')->group(function () {
     Route::get('/{id}', [UserController::class, 'show']);
 });
 
-Route::prefix('users-gallery')->group(function () {
+Route::prefix('user-gallery')->group(function () {
     Route::get('/user/{userId}', [UserImageController::class, 'index']);
     Route::post('/', [UserImageController::class, 'store']);
     Route::get('/{id}', [UserImageController::class, 'show']);
@@ -71,8 +72,12 @@ Route::prefix('users-gallery')->group(function () {
     Route::delete('/{id}', [UserImageController::class, 'destroy']);
 });
 
+Route::prefix('gallery')->group(function (){
+    Route::get('/all', [GalleryController::class, 'index']);
+});
+
 Route::prefix('restaurants')->group(function (){
-    Route::get('/', [RestaurantController::class, 'index']);
+    Route::get('/all', [RestaurantController::class, 'index']);
 });
 
 Route::prefix('favourites')->group(function () {
