@@ -16,6 +16,30 @@ class UserController extends Controller
     ) {}
 
     /**
+     * Регистрация
+     */
+    public function register(Request $request)
+    {
+        $response = UserService::register($request);
+
+
+        return $response;
+    }
+
+    /**
+     * авторизация
+     */
+    public function auth(Request $request)
+    {
+        $response = UserService::login($request);
+
+
+        return $response;
+    }
+
+
+
+    /**
      * Получить всех пользователей
      */
     public function index(): JsonResponse
@@ -85,5 +109,4 @@ class UserController extends Controller
     {
         //
     }
-
 }

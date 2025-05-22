@@ -12,24 +12,49 @@ class Restaurant extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'owner_name',
+        'owner_surname',
+        'owner_patronymic',
+        'restaurant_mail',
+        'title',
+        'phone',
+        'address',
+        'INN',
+        'KPP',
+        'OGRN',
+        'worktime_start',
+        'worktime_end',
+        'telegram_url',
+        'whatsapp_url',
+        'vk_url',
+        'description',
+        'restaurant_site_url',
+        'average_price',
+        'coordX',
+        'coordY',
+        'status',
+        'rating',
+    ];
+
     public $timestamps = false;
 
-    public function images() : HasMany
+    public function images(): HasMany
     {
         return $this->hasMany(RestaurantImage::class);
     }
-    
-    public function favouritedBy() : BelongsToMany
+
+    public function favouritedBy(): BelongsToMany
     {
         return $this->belongsToMany(User::class, 'favourites');
     }
 
-    public function mainImage() : HasOne
+    public function mainImage(): HasOne
     {
         return $this->hasOne(RestaurantImage::class)->oldestOfMany();
     }
 
-    public function reviews() : HasMany
+    public function reviews(): HasMany
     {
         return $this->hasMany(Review::class);
     }
@@ -48,18 +73,18 @@ class Restaurant extends Model
     public static function deleteWithRelations(int $id): bool
     {
         $restaurant = self::with(['reviews', 'images', 'favouritedBy'])->find($id);
-        
+
         if (!$restaurant) {
             return false;
         }
 
         // Удаляем все связи
         $restaurant->favouritedBy()->detach();
-        
+
         // Удаляем связанные записи
         $restaurant->reviews()->delete();
         $restaurant->images()->delete();
-        
+
         // Удаляем сам ресторан
         return $restaurant->delete();
     }
@@ -70,5 +95,5 @@ class Restaurant extends Model
     //     return $this->hasMany(MenuPosition::class);
     // }
 
-    
+
 }
